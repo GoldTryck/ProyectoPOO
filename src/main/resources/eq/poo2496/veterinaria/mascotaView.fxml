@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="882.0" styleClass="pane_1111" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eq.poo2496.veterinaria.Controller">
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+   <children>
+      <AnchorPane prefHeight="570.0" prefWidth="931.0">
+         <children>
+            <ToolBar layoutX="32.0" layoutY="36.0" prefHeight="43.0" prefWidth="830.0" stylesheets="@style.css" AnchorPane.bottomAnchor="520.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="10.0">
+              <items>
+                <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" text="Alta de Mascota" />
+                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" styleClass="button2" text="Adopción" />
+                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" styleClass="button3" text="Devolución" />
+              </items>
+               <padding>
+                  <Insets left="250.0" />
+               </padding>
+            </ToolBar>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>
