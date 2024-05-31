@@ -163,6 +163,11 @@
                         <Image url="@images/background.png" />
                      </image>
                   </ImageView>
+                  <Text fill="#7c58e9" layoutX="228.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenidos a">
+                     <font>
+                        <Font name="System Bold" size="54.0" />
+                     </font>
+                  </Text>
                </children>
             </AnchorPane>
          </children></HBox>

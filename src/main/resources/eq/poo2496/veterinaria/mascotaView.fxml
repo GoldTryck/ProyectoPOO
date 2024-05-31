@@ -4,8 +4,12 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.Bloom?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <HBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="882.0" styleClass="pane_1111" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eq.poo2496.veterinaria.Controller">
    <cursor>
@@ -14,7 +18,7 @@
    <children>
       <AnchorPane prefHeight="570.0" prefWidth="931.0">
          <children>
-            <ToolBar layoutX="32.0" layoutY="36.0" prefHeight="43.0" prefWidth="830.0" stylesheets="@style.css" AnchorPane.bottomAnchor="520.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="10.0">
+            <ToolBar layoutX="16.0" layoutY="157.0" prefHeight="43.0" prefWidth="830.0" stylesheets="@style.css" AnchorPane.bottomAnchor="373.66666666666674" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="157.0">
               <items>
                 <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" text="Alta de Mascota" />
                   <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" styleClass="button2" text="Adopción" />
@@ -24,6 +28,18 @@
                   <Insets left="250.0" />
                </padding>
             </ToolBar>
+            <Pane prefHeight="61.0" prefWidth="888.0" styleClass="inner_pane" stylesheets="@../../../../../../target/classes/eq/poo2496/veterinaria/style.css">
+               <children>
+                  <Text fill="#552f74" layoutX="11.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MASCOTITAS / Mascotas" wrappingWidth="403.13671875">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </Text>
+               </children>
+            </Pane>
          </children>
       </AnchorPane>
    </children>
