@@ -14,4 +14,8 @@ public class Cliente extends Persona {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "numeroMascota", referencedColumnName = "numeroMascota", unique = true, nullable = false)
     private Mascota mascota;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "idTarjeta", referencedColumnName = "idTarjeta")
+    private Tarjeta tarjeta;
 }

@@ -15,7 +15,7 @@ import lombok.EqualsAndHashCode;
 @AttributeOverride(name = "id", column = @Column(name = "numeroGerente"))
 public class Gerente extends Persona {
 
-    @Column(name = "sucursal", nullable = false)
+    @Column(name = "sucursal", nullable = false, unique = true)
     private Sucursal sucursal;
 }
 

@@ -1,5 +1,6 @@
 package eq.poo2496.veterinaria;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.layout.HBox;
 import org.springframework.stereotype.Component;
@@ -11,6 +12,7 @@ public class Controller {
 
     @FXML
     public HBox cental_content;
+    public HBox inside_content;
 
     @FXML
     private void MascotaView() {
@@ -78,8 +80,20 @@ public class Controller {
         }
     }
 
+
+
+
+    public void registroMascota(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/eq/poo2496/veterinaria/registroMascota.fxml"));
+        HBox innerContent = loader.load();
+
+        inside_content.getChildren().clear();
+        inside_content.getChildren().add(innerContent);
+    }
+
     @FXML
-    public void endApp() {
-        System.exit(0);
+    private void limpiarEscena() {
+        // Limpia el contenido del contenedor principal
+        cental_content.getChildren().clear();
     }
 }

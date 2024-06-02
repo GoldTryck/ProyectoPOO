@@ -17,7 +17,7 @@ public class Paquete {
     private String nombre;
 
     @ElementCollection
-    @CollectionTable(name = "tServicios", joinColumns = @JoinColumn(name = "paquete_id"))
+    @CollectionTable(name = "tServicios", joinColumns = @JoinColumn(name = "idPaquete"))
     @Column(name = "servicio")
     private List<String> servicios;
 
