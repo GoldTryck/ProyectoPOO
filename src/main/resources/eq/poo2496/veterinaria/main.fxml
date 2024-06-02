@@ -167,7 +167,7 @@
                </effect>
             </ToggleButton>
             <ToggleButton layoutX="7.0" layoutY="382.0"
-                          mnemonicParsing="false" onAction="#clearPrimary"
+                          mnemonicParsing="false"
                           prefHeight="21.0" prefWidth="180.0"
                           styleClass="pane_1111" stylesheets="@style.css"
                           text="Paquetes" textFill="WHITE">
