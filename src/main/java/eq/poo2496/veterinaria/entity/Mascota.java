@@ -2,7 +2,6 @@ package eq.poo2496.veterinaria.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
-
 import java.util.List;
 
 @Data
@@ -19,6 +18,10 @@ public class Mascota {
 
     @Column(name = "raza", length = 40, nullable = false)
     private String raza;
+
+    @Column(name = "status", nullable = false,
+            columnDefinition = "VARCHAR(11) CHECK (status IN ('CLIENTE', 'ADOPCION', 'DEVOLUCION', 'ADOPTADO'))")
+    private String status;
 
     @ElementCollection
     @CollectionTable(name = "tVacunas", joinColumns = @JoinColumn(name = "numeroMascota"))
