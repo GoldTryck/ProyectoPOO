@@ -1,4 +1,4 @@
-package eq.poo2496.veterinaria.Service;
+package eq.poo2496.veterinaria.service;
 
 import eq.poo2496.veterinaria.entity.Mascota;
 import eq.poo2496.veterinaria.repository.MascotaRepository;
@@ -33,7 +33,16 @@ public class MascotaService {
     public List<Mascota> getByStatus(String status) {
         return mascotaRepository.findByStatus(status);
     }
+    public Mascota getById(Long id) {
+        try{
+            return mascotaRepository.findByNumeroMascota(id);
+        }catch (Exception e){
+            String message = e.getMessage();
+            Utility.showDialog("Error en la base de datos", message, javafx.scene.control.Alert.AlertType.ERROR);
+            return null;
+        }
 
+    }
     public void updateStatus(Mascota mascota){
         try{
             Long id = mascota.getNumeroMascota();

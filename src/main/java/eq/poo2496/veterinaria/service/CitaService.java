@@ -1,4 +1,4 @@
-package eq.poo2496.veterinaria.Service;
+package eq.poo2496.veterinaria.service;
 
 import eq.poo2496.veterinaria.entity.*;
 import eq.poo2496.veterinaria.exceptions.CitaOcupadaException;

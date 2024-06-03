@@ -11,6 +11,7 @@ import java.util.List;
 
 @Repository
 public interface MascotaRepository extends JpaRepository<Mascota, Long> {
+    Mascota findByNumeroMascota(Long numeroMascota);
     List<Mascota> findByStatus(String status);
     @Transactional
     @Modifying

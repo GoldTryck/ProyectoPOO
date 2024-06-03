@@ -1,33 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<HBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="882.0" styleClass="side_ankerpane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eq.poo2496.veterinaria.controller.MenuController">
-   <cursor>
-      <Cursor fx:constant="DEFAULT" />
-   </cursor>
+<VBox fx:id="root" prefHeight="700.0" prefWidth="900.0" spacing="10.0" styleClass="side_ankerpane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eq.poo2496.veterinaria.controller.MascotaMenuController">
    <children>
-      <VBox prefHeight="167.0" prefWidth="878.0" spacing="10.0">
+      <HBox fx:id="headrePane" alignment="CENTER" opacity="0.92" prefHeight="53.0" prefWidth="700.0" spacing="100.0" styleClass="menu-bar">
          <children>
-            <HBox alignment="CENTER" opacity="0.92" prefHeight="53.0" prefWidth="783.0" spacing="100.0" styleClass="menu-bar">
-               <children>
-                <Button  mnemonicParsing="false" onAction="#RegistroMascota" prefHeight="30.0" prefWidth="130.0" text="Alta de Mascota" />
-                  <Button onAction="#Adopcion" mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" styleClass="button2" text="Adopción" />
-                  <Button onAction="#Devolucion" mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" styleClass="button3" text="Devolución" />
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </HBox>
-            <HBox fx:id="dataPane" prefHeight="625.0" prefWidth="878.0" />
+          <Button mnemonicParsing="false" onAction="#RegistroMascota" prefHeight="30.0" prefWidth="130.0" text="Alta de Mascota" />
+            <Button mnemonicParsing="false" onAction="#Adopcion" prefHeight="30.0" prefWidth="130.0" styleClass="button2" text="Adopción" />
+            <Button mnemonicParsing="false" onAction="#Devolucion" prefHeight="30.0" prefWidth="130.0" styleClass="button3" text="Devolución" />
          </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <VBox fx:id="dataPane" prefHeight="625.0" prefWidth="850.0" spacing="10.0">
          <padding>
             <Insets top="10.0" />
          </padding>
       </VBox>
    </children>
-</HBox>
+   <padding>
+      <Insets left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

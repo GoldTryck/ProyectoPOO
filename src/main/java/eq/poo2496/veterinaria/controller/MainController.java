@@ -19,11 +19,14 @@ public class MainController {
     public VBox primaryPane;
     @FXML
     public HBox dataPane;
-
+    SpringFXMLLoader loader = new SpringFXMLLoader();
     @FXML
     private void MascotaView() throws IOException {
-        SpringFXMLLoader v = new SpringFXMLLoader();
-        v.loadView("/eq/poo2496/veterinaria/mascotaView.fxml", primaryPane);
+        loader.loadView("/eq/poo2496/veterinaria/mascotaView.fxml", primaryPane);
+    }
+    @FXML
+    private void ClienteView() throws IOException {
+        loader.loadView("/eq/poo2496/veterinaria/clienteView.fxml", primaryPane);
     }
 
 

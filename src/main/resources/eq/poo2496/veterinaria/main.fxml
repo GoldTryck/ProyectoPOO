@@ -13,42 +13,24 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<HBox fx:id="root" maxHeight="-Infinity"
-      maxWidth="-Infinity" minHeight="-Infinity"
-      minWidth="-Infinity" prefHeight="700.0"
-      prefWidth="1091.0" stylesheets="@style.css"
-      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="eq.poo2496.veterinaria.controller.MainController">
+<HBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eq.poo2496.veterinaria.controller.MainController">
    <cursor>
       <Cursor fx:constant="DEFAULT" />
    </cursor>
-   <VBox fx:id="sidePane" prefHeight="700.0" prefWidth="236.0">
+   <VBox fx:id="sidePane" prefHeight="700.0" prefWidth="200.0">
       <children>
-         <AnchorPane fx:id="side_ankerpane" prefHeight="700.0"
-                     prefWidth="200.0" styleClass="side_ankerpane"
-                     stylesheets="@style.css">
-            <Pane fx:id="inner_pane" layoutX="10.0" layoutY="14.0"
-                  prefHeight="54.0" prefWidth="180.0" styleClass="inner_pane"
-                  stylesheets="@style.css">
-               <ImageView fitHeight="45.0" fitWidth="42.0"
-                          layoutX="14.0" layoutY="6.0" opacity="0.67"
-                          pickOnBounds="true" preserveRatio="true">
+         <AnchorPane fx:id="side_ankerpane" prefHeight="700.0" prefWidth="200.0" styleClass="side_ankerpane" stylesheets="@style.css">
+            <Pane fx:id="inner_pane" layoutX="10.0" layoutY="14.0" prefHeight="54.0" prefWidth="180.0" styleClass="inner_pane" stylesheets="@style.css">
+               <ImageView fitHeight="45.0" fitWidth="42.0" layoutX="14.0" layoutY="6.0" opacity="0.67" pickOnBounds="true" preserveRatio="true">
                   <Image url="@images/coffee-svgrepo-com.png" />
                </ImageView>
-               <Text fill="WHITE" layoutX="56.0" layoutY="31.0"
-                     strokeType="OUTSIDE" strokeWidth="0.0" text="Menú"
-                     wrappingWidth="78.0">
+               <Text fill="WHITE" layoutX="56.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menú" wrappingWidth="78.0">
                   <font>
                      <Font name="System Bold" size="12.0" />
                   </font>
                </Text>
             </Pane>
-            <Button layoutX="17.0" layoutY="623.0"
-                    mnemonicParsing="false"
-                    prefHeight="25.0" prefWidth="161.0"
-                    styleClass="button2" stylesheets="@style.css"
-                    text="Salir" textAlignment="CENTER"
-                    textFill="#434242" onAction="#endApp">
+            <Button layoutX="17.0" layoutY="623.0" mnemonicParsing="false" onAction="#endApp" prefHeight="25.0" prefWidth="161.0" styleClass="button2" stylesheets="@style.css" text="Salir" textAlignment="CENTER" textFill="#434242">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -56,14 +38,9 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <ToggleButton layoutX="7.0" layoutY="96.0"
-                          mnemonicParsing="false" prefHeight="16.0"
-                          prefWidth="180.0" styleClass="btn_workbench"
-                          stylesheets="@style.css" text="Clientes"
-                          textFill="WHITE">
+            <ToggleButton onAction="#ClienteView" layoutX="7.0" layoutY="96.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="180.0" styleClass="btn_workbench" stylesheets="@style.css" text="Clientes" textFill="WHITE">
                <graphic>
-                  <ImageView fitHeight="43.0" fitWidth="42.0" pickOnBounds="true"
-                             preserveRatio="true">
+                  <ImageView fitHeight="43.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
                      <Image url="@images/client.png" />
                   </ImageView>
                </graphic>
@@ -77,19 +54,12 @@
                   <Glow />
                </effect>
             </ToggleButton>
-            <ToggleButton layoutX="7.0" layoutY="157.0"
-                          mnemonicParsing="false" onAction="#MascotaView"
-                          prefHeight="21.0" prefWidth="180.0"
-                          styleClass="pane_1" stylesheets="@style.css"
-                          text="Mascotas" textAlignment="RIGHT"
-                          textFill="WHITE">
+            <ToggleButton layoutX="7.0" layoutY="157.0" mnemonicParsing="false" onAction="#MascotaView" prefHeight="21.0" prefWidth="180.0" styleClass="pane_1" stylesheets="@style.css" text="Mascotas" textAlignment="RIGHT" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
                <graphic>
-                  <ImageView fx:id="btn_workbench1" fitHeight="38.0"
-                             fitWidth="36.0" pickOnBounds="true"
-                             preserveRatio="true">
+                  <ImageView fx:id="btn_workbench1" fitHeight="38.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                      <Image url="@images/dog-svgrepo-com.png" />
                   </ImageView>
                </graphic>
@@ -100,18 +70,12 @@
                   <Glow />
                </effect>
             </ToggleButton>
-            <ToggleButton layoutX="7.0" layoutY="213.0"
-                          mnemonicParsing="false" prefHeight="21.0"
-                          prefWidth="180.0" styleClass="pane_1111"
-                          stylesheets="@style.css" text="Personal"
-                          textFill="WHITE">
+            <ToggleButton layoutX="7.0" layoutY="213.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="180.0" styleClass="pane_1111" stylesheets="@style.css" text="Personal" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
                <graphic>
-                  <ImageView fx:id="btn_workbench11" fitHeight="38.0"
-                             fitWidth="36.0" pickOnBounds="true"
-                             preserveRatio="true">
+                  <ImageView fx:id="btn_workbench11" fitHeight="38.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                      <Image url="@images/veterinario.png" />
                   </ImageView>
                </graphic>
@@ -122,18 +86,12 @@
                   <Glow />
                </effect>
             </ToggleButton>
-            <ToggleButton layoutX="7.0" layoutY="267.0"
-                          mnemonicParsing="false" prefHeight="16.0"
-                          prefWidth="180.0" styleClass="btn_workbench"
-                          stylesheets="@style.css" text="Servicios"
-                          textFill="WHITE">
+            <ToggleButton layoutX="7.0" layoutY="267.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="180.0" styleClass="btn_workbench" stylesheets="@style.css" text="Servicios" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
                <graphic>
-                  <ImageView fx:id="btn_workbench2" fitHeight="43.0"
-                             fitWidth="42.0" pickOnBounds="true"
-                             preserveRatio="true">
+                  <ImageView fx:id="btn_workbench2" fitHeight="43.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
                      <Image url="@images/servicio.png" />
                   </ImageView>
                </graphic>
@@ -144,18 +102,12 @@
                   <Glow />
                </effect>
             </ToggleButton>
-            <ToggleButton layoutX="8.0" layoutY="327.0"
-                          mnemonicParsing="false" prefHeight="21.0"
-                          prefWidth="180.0" styleClass="pane_1"
-                          stylesheets="@style.css" text="Consultas"
-                          textAlignment="RIGHT" textFill="WHITE">
+            <ToggleButton layoutX="8.0" layoutY="327.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="180.0" styleClass="pane_1" stylesheets="@style.css" text="Consultas" textAlignment="RIGHT" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
                <graphic>
-                  <ImageView fx:id="btn_workbench12" fitHeight="38.0"
-                             fitWidth="36.0" pickOnBounds="true"
-                             preserveRatio="true">
+                  <ImageView fx:id="btn_workbench12" fitHeight="38.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                      <Image url="@images/consultas.png" />
                   </ImageView>
                </graphic>
@@ -166,18 +118,12 @@
                   <Glow />
                </effect>
             </ToggleButton>
-            <ToggleButton layoutX="7.0" layoutY="382.0"
-                          mnemonicParsing="false"
-                          prefHeight="21.0" prefWidth="180.0"
-                          styleClass="pane_1111" stylesheets="@style.css"
-                          text="Paquetes" textFill="WHITE">
+            <ToggleButton layoutX="7.0" layoutY="382.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="180.0" styleClass="pane_1111" stylesheets="@style.css" text="Paquetes" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
                <graphic>
-                  <ImageView fx:id="btn_workbench111" fitHeight="38.0"
-                             fitWidth="36.0" pickOnBounds="true"
-                             preserveRatio="true">
+                  <ImageView fx:id="btn_workbench111" fitHeight="38.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                      <Image url="@images/paquetes.png" />
                   </ImageView>
                </graphic>
@@ -193,28 +139,21 @@
    </VBox>
 
    <VBox fx:id="primaryPane" prefHeight="421.0" prefWidth="897.0">
-      <Pane prefHeight="121.0" prefWidth="876.0" styleClass="inner_pane"
-            stylesheets="@style.css">
-         <Text fill="#434242" layoutX="198.0" layoutY="46.0" strokeType="OUTSIDE"
-               strokeWidth="0.0" text="MASCOTITAS" wrappingWidth="403.13671875">
+      <Pane prefHeight="121.0" prefWidth="876.0" styleClass="inner_pane" stylesheets="@style.css">
+         <Text fill="#434242" layoutX="198.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MASCOTITAS" wrappingWidth="403.13671875">
             <font>
                <Font name="System Bold" size="30.0" />
             </font>
          </Text>
-         <Text fill="#7c6a6a" layoutX="198.0"
-               layoutY="62.0" strokeType="OUTSIDE"
-               strokeWidth="0.0" text="Proyecto Programación Orientada a Objetos"
-               wrappingWidth="521.13671875">
+         <Text fill="#7c6a6a" layoutX="198.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Proyecto Programación Orientada a Objetos" wrappingWidth="521.13671875">
             <font>
                <Font size="16.0" />
             </font>
          </Text>
-         <ImageView fitHeight="78.0" fitWidth="78.0" layoutX="102.0" layoutY="9.0"
-                    pickOnBounds="true" preserveRatio="true">
+         <ImageView fitHeight="78.0" fitWidth="78.0" layoutX="102.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
             <Image url="@images/logoMascota.png" />
          </ImageView>
-         <ImageView fitHeight="78.0" fitWidth="78.0" layoutX="24.0" layoutY="9.0"
-                    pickOnBounds="true" preserveRatio="true">
+         <ImageView fitHeight="78.0" fitWidth="78.0" layoutX="24.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
             <Image url="@images/hospital-svgrepo-com.png" />
          </ImageView>
       </Pane>
@@ -222,9 +161,7 @@
          <children>
             <AnchorPane prefHeight="574.0" prefWidth="1026.0">
                <children>
-                  <ImageView fitHeight="351.0" fitWidth="424.0" layoutX="229.0"
-                             layoutY="112.0" opacity="0.21" pickOnBounds="true"
-                             preserveRatio="true" rotate="22.2">
+                  <ImageView fitHeight="351.0" fitWidth="424.0" layoutX="229.0" layoutY="112.0" opacity="0.21" pickOnBounds="true" preserveRatio="true" rotate="22.2">
                      <image>
                         <Image url="@images/background.png" />
                      </image>

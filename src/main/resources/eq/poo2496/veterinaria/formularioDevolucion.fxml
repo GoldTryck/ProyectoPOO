@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="dev" styleClass="pane_11" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eq.poo2496.veterinaria.controller.DevolucionController">
+<VBox fx:id="dev" prefHeight="650.0" styleClass="pane_11" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eq.poo2496.veterinaria.controller.DevolucionController">
    <children>
    <HBox fx:id="devHeader" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
      <children>

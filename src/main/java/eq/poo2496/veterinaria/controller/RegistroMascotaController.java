@@ -1,6 +1,6 @@
 package eq.poo2496.veterinaria.controller;
 
-import eq.poo2496.veterinaria.Service.MascotaService;
+import eq.poo2496.veterinaria.service.MascotaService;
 import eq.poo2496.veterinaria.entity.Mascota;
 import eq.poo2496.veterinaria.enums.*;
 import eq.poo2496.veterinaria.util.Utility;
