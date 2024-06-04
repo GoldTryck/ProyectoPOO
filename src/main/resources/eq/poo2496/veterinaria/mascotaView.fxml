@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<<<<<<< HEAD
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.effect.Bloom?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -10,14 +10,16 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
+=======
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+>>>>>>> 959485335414ffb16494be22de19c9cb4df25a33
 
-<HBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="882.0" styleClass="pane_1111" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eq.poo2496.veterinaria.Controller">
-   <cursor>
-      <Cursor fx:constant="DEFAULT" />
-   </cursor>
+<VBox fx:id="root" prefHeight="700.0" prefWidth="900.0" spacing="10.0" styleClass="side_ankerpane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eq.poo2496.veterinaria.controller.MascotaMenuController">
    <children>
-      <AnchorPane prefHeight="570.0" prefWidth="931.0">
+      <HBox fx:id="headrePane" alignment="CENTER" opacity="0.92" prefHeight="53.0" prefWidth="700.0" spacing="100.0" styleClass="menu-bar">
          <children>
+<<<<<<< HEAD
             <ToolBar layoutX="16.0" layoutY="157.0" prefHeight="43.0" prefWidth="830.0" stylesheets="@style.css" AnchorPane.bottomAnchor="373.66666666666674" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="157.0">
               <items>
                 <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" text="Alta de Mascota" />
@@ -40,7 +42,23 @@
                   </Text>
                </children>
             </Pane>
+=======
+          <Button mnemonicParsing="false" onAction="#RegistroMascota" prefHeight="30.0" prefWidth="130.0" text="Alta de Mascota" />
+            <Button mnemonicParsing="false" onAction="#Adopcion" prefHeight="30.0" prefWidth="130.0" styleClass="button2" text="Adopción" />
+            <Button mnemonicParsing="false" onAction="#Devolucion" prefHeight="30.0" prefWidth="130.0" styleClass="button3" text="Devolución" />
+>>>>>>> 959485335414ffb16494be22de19c9cb4df25a33
          </children>
-      </AnchorPane>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <VBox fx:id="dataPane" prefHeight="625.0" prefWidth="850.0" spacing="10.0">
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </VBox>
    </children>
-</HBox>
+   <padding>
+      <Insets left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

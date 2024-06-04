@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="adpt" styleClass="pane_11" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eq.poo2496.veterinaria.controller.AdopcionController">
+   <children>
+   <HBox fx:id="adptHeader" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+     <children>
+       <Label alignment="CENTER" prefHeight="29.0" prefWidth="881.0" text="Adopción de Mascotas" textFill="#361212">
+         <font>
+             <Font name="Andale Mono" size="42.0" />
+         </font>
+       </Label>
+     </children>
+   </HBox>
+   <HBox fx:id="adptBody" alignment="CENTER" prefHeight="567.0" prefWidth="878.0" spacing="100.0" styleClass="menu-item">
+     <children>
+       <VBox alignment="CENTER" prefHeight="533.0" prefWidth="884.0" spacing="5.0">
+         <children>
+                  <Label text="Mascotas en Adopción" />
+                  <TableView fx:id="mtable" prefHeight="200.0" prefWidth="771.0">
+                    <columns>
+                      <TableColumn fx:id="numMascota" prefWidth="80.33319091796875" text="NumeroMascota" />
+                        <TableColumn fx:id="mNombre" prefWidth="191.33326721191406" text="Nombre" />
+                      <TableColumn fx:id="mRaza" minWidth="0.0" prefWidth="214.00009155273438" text="Raza" />
+                        <TableColumn fx:id="mStatus" prefWidth="181.00006103515625" text="Status" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets left="100.0" right="100.0" />
+                     </VBox.margin>
+                  </TableView>
+                  <Label text="Clientes" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <TextField prefHeight="33.0" prefWidth="188.0" promptText="numeroCliente" />
+                        <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="84.0" styleClass="button3" text="Buscar" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="100.0" right="100.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <TableView fx:id="ctable" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="NumeroCliente" />
+                      <TableColumn prefWidth="195.66656494140625" text="Nombre" />
+                        <TableColumn prefWidth="213.66673278808594" text="ApellidoPaterno" />
+                        <TableColumn prefWidth="183.0001220703125" text="ApellidoMaterno" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets left="100.0" right="100.0" />
+                     </VBox.margin>
+                  </TableView>
+          <HBox fx:id="campoRegistrar" alignment="CENTER" prefHeight="164.0" prefWidth="867.0">
+           <children>
+             <Button alignment="CENTER" onAction="#adptButton" prefHeight="58.0" prefWidth="425.0" text="Adoptar Mascota">
+               <font>
+                 <Font name="Andale Mono" size="28.0" />
+               </font>
+             </Button>
+           </children>
+          </HBox>
+         </children>
+       </VBox>
+     </children>
+   </HBox>
+   </children>
+</VBox>
