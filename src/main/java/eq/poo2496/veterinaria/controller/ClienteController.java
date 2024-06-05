@@ -1,5 +1,6 @@
 package eq.poo2496.veterinaria.controller;
 
+// Importaciones necesarias para el funcionamiento del controlador
 import eq.poo2496.veterinaria.entity.Cliente;
 import eq.poo2496.veterinaria.entity.Mascota;
 import eq.poo2496.veterinaria.service.ClienteService;

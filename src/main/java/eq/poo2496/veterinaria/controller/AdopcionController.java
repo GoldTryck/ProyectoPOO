@@ -1,3 +1,7 @@
+/*Author: Larios Ponce Hector
+Description: Este código es un controlador para una aplicación de adopción de mascotas en una veterinaria. Se encarga de
+cargar las mascotas disponibles para adopción y gestionar su adopción */
+
 // Declaración del paquete en el que se encuentra este controlador
 package eq.poo2496.veterinaria.controller;
 
