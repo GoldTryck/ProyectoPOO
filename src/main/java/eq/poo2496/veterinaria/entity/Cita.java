@@ -1,3 +1,9 @@
+/*Author: Larios Ponce Hector
+Description: define una clase llamada Cita que representa una cita en una veterinaria. Utiliza anotaciones de JPA para
+mapear la clase a una tabla en la base de datos y Lombok para generar métodos getter, setter, equals y hashCode de forma
+automática. Define varios campos para almacenar información sobre la cita, como la fecha y hora, el cliente, la mascota,
+el veterinario, el asistente, la descripción del servicio y los paquetes asociados a la cita.*/
+
 package eq.poo2496.veterinaria.entity;
 
 // Importaciones necesarias para las anotaciones de JPA y Lombok

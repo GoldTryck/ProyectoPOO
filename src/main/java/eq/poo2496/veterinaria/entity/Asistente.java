@@ -1,3 +1,9 @@
+/*Author: Larios Ponce Hector
+Description: Define una clase llamada Asistente que representa a un asistente en una veterinaria.
+Utiliza anotaciones de JPA para mapear la clase a una tabla en la base de datos y Lombok para generar métodos getter,
+setter, equals y hashCode de forma automática. Sobrescribe el atributo id de la clase base Persona con el nombre de
+columna numeroAsistente en la tabla de la base de datos.*/
+
 package eq.poo2496.veterinaria.entity;
 
 // Importaciones necesarias para las anotaciones de JPA y Lombok
