@@ -4,6 +4,7 @@ en JavaFX. El controlador tiene métodos para manejar eventos relacionados con l
 registrar una nueva mascota, gestionar adopciones o procesar devoluciones de mascotas.*/
 package eq.poo2496.veterinaria.controller;
 
+// Importaciones necesarias para el funcionamiento del controlador
 import eq.poo2496.veterinaria.util.SpringFXMLLoader; // Importa el cargador personalizado de vistas FXML
 import javafx.fxml.FXML; // Importa las anotaciones de JavaFX para manejar FXML
 import javafx.scene.layout.HBox; // Importa la clase HBox de JavaFX para manejar el diseño de la GUI
