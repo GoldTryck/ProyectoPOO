@@ -1,3 +1,5 @@
+/*Author: Larios Ponce Hector
+Description: */
 package eq.poo2496.veterinaria.entity;
 
 import jakarta.persistence.*;
