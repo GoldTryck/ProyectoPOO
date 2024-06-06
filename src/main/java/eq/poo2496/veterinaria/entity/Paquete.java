@@ -17,14 +17,14 @@ public class Paquete { // Define la clase Paquete, que representa un paquete de 
     private Long idPaquete; // Número único que identifica al paquete
 
     @Column(name = "nombrePaquete", nullable = false)
-    private String nombre;
+    private String nombre; //Nombre del paquete
 
-    @ElementCollection
-    @CollectionTable(name = "tServicios", joinColumns = @JoinColumn(name = "idPaquete"))
-    @Column(name = "servicio")
-    private List<String> servicios;
+    @ElementCollection // Indica que la propiedad es una colección de elementos
+    @CollectionTable(name = "tServicios", joinColumns = @JoinColumn(name = "idPaquete")) // Especifica los detalles de la tabla para la colección
+    @Column(name = "servicio") // Especifica las propiedades de la columna en la base de datos
+    private List<String> servicios; // Lista de servicios incluidos en el paquete
 
-    @Column(name = "precio", nullable = false)
-    private double precio;
+    @Column(name = "precio", nullable = false) // Especifica las propiedades de la columna en la base de datos
+    private double precio; // Precio del paquete
 
 }
