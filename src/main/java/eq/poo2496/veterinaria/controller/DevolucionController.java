@@ -1,5 +1,5 @@
 /*Author: Flores Harrison Rosa Esmeralda
-Description:
+Description: Este código define un controlador en JavaFX para la devolución de mascotas en una aplicación de veterinaria.
 */
 
 package eq.poo2496.veterinaria.controller;
