@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="root" prefHeight="590.0" prefWidth="900.0" spacing="10.0" styleClass="progress" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER" prefHeight="137.0" prefWidth="622.0">
+         <children>
+            <Label alignment="CENTER" text="Consulta Personal">
+               <font>
+                  <Font name="Tahoma Bold" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <VBox prefHeight="491.0" prefWidth="622.0" spacing="20.0">
+         <children>
+            <HBox fx:id="radiogroup" alignment="CENTER" prefHeight="32.0" prefWidth="576.0" spacing="15.0" />
+            <GridPane alignment="CENTER" prefHeight="187.0" prefWidth="501.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="423.3333740234375" minWidth="10.0" prefWidth="147.06118774414062" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1142.0000203450522" minWidth="135.66666666666666" prefWidth="348.9388122558594" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="76.0" prefWidth="285.0" text="Nombre ">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Tahoma" size="15.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="1">
+                     <children>
+                        <TextField fx:id="nombre" alignment="CENTER" prefHeight="29.0" prefWidth="200.0" promptText="Nombre(s)">
+                           <font>
+                              <Font name="Tahoma" size="15.0" />
+                           </font>
+                        </TextField>
+                        <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="100.0" styleClass="button3" text="Buscar" />
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER_RIGHT" prefHeight="117.0" prefWidth="321.0" text="Apellido Paterno " GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Tahoma" size="15.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="220.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <TextField fx:id="ap" alignment="CENTER" prefHeight="29.0" prefWidth="200.0" promptText="Apellido Paterno">
+                           <font>
+                              <Font name="Tahoma" size="15.0" />
+                           </font>
+                        </TextField>
+                        <Button mnemonicParsing="false" prefWidth="100.0" styleClass="button3" text="Buscar" />
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER_RIGHT" prefHeight="132.0" prefWidth="203.0" text="Apellido Materno " GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Tahoma" size="15.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="24.0" prefWidth="349.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <TextField fx:id="am" alignment="CENTER" prefHeight="29.0" prefWidth="200.0" promptText="Apellido Materno">
+                           <font>
+                              <Font name="Tahoma" size="15.0" />
+                           </font>
+                        </TextField>
+                        <Button mnemonicParsing="false" prefWidth="100.0" styleClass="button3" text="Buscar" />
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER_RIGHT" prefHeight="136.0" prefWidth="209.0" text="CURP " GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Tahoma" size="15.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <TextField fx:id="curp" alignment="CENTER" prefWidth="200.0" promptText="LAHT780418HDFRNC00">
+                           <font>
+                              <Font name="Tahoma" size="15.0" />
+                           </font>
+                        </TextField>
+                        <Button mnemonicParsing="false" prefWidth="100.0" styleClass="button3" text="Buscar" />
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+            <TextField fx:id="cedula" alignment="CENTER" prefHeight="29.0" prefWidth="369.0" promptText="23" visible="false">
+               <font>
+                  <Font name="Tahoma" size="15.0" />
+               </font>
+            </TextField>
+            <TableView fx:id="tsucursal" prefHeight="81.0" prefWidth="516.0">
+              <columns>
+                <TableColumn fx:id="snombre" prefWidth="70.44158935546875" text="Numero" />
+                <TableColumn fx:id="szona" prefWidth="122.55838012695312" text="Nombre" />
+                  <TableColumn fx:id="szona1" prefWidth="164.16421508789062" text="Apellido paterno" />
+                  <TableColumn fx:id="szona2" prefWidth="168.306640625" text="Apellido Materno" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <HBox alignment="CENTER" prefHeight="51.0" prefWidth="576.0">
+               <children>
+                  <Button fx:id="register" disable="true" mnemonicParsing="false" prefHeight="33.0" prefWidth="155.0" styleClass="button2" text="Dar de baja" />
+               </children>
+            </HBox>
+         </children>
+         <VBox.margin>
+            <Insets left="180.0" right="180.0" />
+         </VBox.margin>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

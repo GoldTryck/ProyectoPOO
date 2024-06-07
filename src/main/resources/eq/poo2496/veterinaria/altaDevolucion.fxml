@@ -9,13 +9,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="dev" prefHeight="650.0" styleClass="pane_11" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eq.poo2496.veterinaria.controller.DevolucionController">
+<VBox fx:id="dev" fx:controller="eq.poo2496.veterinaria.controller.DevolucionController" prefHeight="590.0" styleClass="pane_11" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
    <HBox fx:id="devHeader" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
      <children>
-       <Label alignment="CENTER" prefHeight="29.0" prefWidth="881.0" text="Devolución de Mascotas" textFill="#361212">
+       <Label alignment="CENTER" prefHeight="29.0" prefWidth="881.0" text="Devolución de Mascotas">
          <font>
-             <Font name="Andale Mono" size="42.0" />
+             <Font name="Tahoma Bold" size="40.0" />
          </font>
        </Label>
      </children>
@@ -24,7 +24,10 @@
      <children>
        <VBox alignment="CENTER" prefHeight="533.0" prefWidth="884.0" spacing="10.0">
          <children>
-                  <Label text="Seleccione la mascota a devolver..." />
+                  <Label text="Seleccione la mascota a devolver...">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font></Label>
                   <TableView fx:id="mtable" prefHeight="200.0" prefWidth="771.0">
                     <columns>
                       <TableColumn fx:id="numMascota" prefWidth="80.33319091796875" text="NumeroMascota" />
@@ -38,7 +41,7 @@
                   </TableView>
           <HBox alignment="CENTER" prefHeight="76.0" prefWidth="868.0">
            <children>
-             <Button alignment="CENTER" onAction="#devButton" prefHeight="58.0" prefWidth="425.0" styleClass="button2" text="Devolover Mascota">
+             <Button fx:id="devolver" alignment="CENTER" prefHeight="58.0" prefWidth="425.0" styleClass="button2" text="Devolover Mascota">
                <font>
                  <Font name="Andale Mono" size="28.0" />
                </font>

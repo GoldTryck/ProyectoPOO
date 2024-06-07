@@ -21,13 +21,13 @@ public class Persona {
     @Column(name = "apellidoPaterno", length = 40, nullable = false)
     private String apellidoPaterno;
 
-    @Column(name = "apeellidoMaterno", length = 40)
+    @Column(name = "apellidoMaterno", length = 40)
     private String apellidoMaterno;
 
     @Temporal(TemporalType.DATE)
     @Column(name = "fechaNacimiento", nullable = false)
     private Date fechaNacimiento;
 
-    @Column(name = "curp", length = 18, unique = true, nullable = false)
+    @Column(name = "curp", length = 19, unique = true, nullable = false)
     private String curp;
 }

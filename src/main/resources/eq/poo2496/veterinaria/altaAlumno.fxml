@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="root" prefHeight="590.0" prefWidth="900.0" spacing="10.0" styleClass="progress" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eq.poo2496.veterinaria.controller.clienteController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="61.0" prefWidth="876.0">
+         <children>
+            <Label alignment="CENTER" text="Registro de Alumno">
+               <font>
+                  <Font name="Tahoma Bold" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <MenuBar nodeOrientation="LEFT_TO_RIGHT">
+              <menus>
+                <Menu mnemonicParsing="false" text="Archivo">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edición">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Alumno">
+                     <items>
+                        <MenuItem fx:id="pane_11" mnemonicParsing="false" text="Nuevo..." />
+                     </items>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="Ver">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+         <padding>
+            <Insets left="100.0" right="100.0" top="10.0" />
+         </padding>
+      </VBox>
+      <VBox prefHeight="437.0" prefWidth="652.0" spacing="20.0">
+         <children>
+            <GridPane alignment="CENTER" prefHeight="187.0" prefWidth="501.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="423.3333740234375" minWidth="10.0" prefWidth="243.43292236328125" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1142.0000203450522" minWidth="86.5960693359375" prefWidth="220.06707763671875" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1142.0000203450522" minWidth="135.66666666666666" prefWidth="190.43292236328125" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="28.266769409179688" minHeight="10.0" prefHeight="28.266769409179688" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="27.0" minHeight="10.0" prefHeight="25.733230590820312" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="43.46797180175781" minHeight="10.0" prefHeight="39.66766357421875" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="35.30181884765625" minHeight="10.0" prefHeight="35.30181884765625" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="22.93292236328125" minHeight="5.19818115234375" prefHeight="5.19818115234375" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                     <children>
+                        <TextField fx:id="nombre" alignment="CENTER" prefHeight="29.0" prefWidth="235.0" promptText="Nombre(s)">
+                           <font>
+                              <Font name="Tahoma" size="15.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <TextField fx:id="ap" alignment="CENTER" prefHeight="29.0" prefWidth="200.0" promptText="Apellido Paterno">
+                           <font>
+                              <Font name="Tahoma" size="15.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <children>
+                        <TextField fx:id="am" alignment="CENTER" prefHeight="29.0" prefWidth="200.0" promptText="Apellido Materno">
+                           <font>
+                              <Font name="Tahoma" size="15.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <Label alignment="BOTTOM_CENTER" prefHeight="136.0" prefWidth="209.0" text="Correo electronico" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Tahoma" size="15.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+                     <children>
+                        <TextField fx:id="curp" alignment="CENTER" prefHeight="29.0" prefWidth="235.0" promptText="someone@something.com">
+                           <font>
+                              <Font name="Tahoma" size="15.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <Label alignment="BOTTOM_CENTER" prefHeight="169.0" prefWidth="343.0" text="Fecha de Nacimiento " GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Tahoma" size="15.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="fn" prefHeight="29.0" prefWidth="238.0" promptText="00/00/000" GridPane.rowIndex="6" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <TextField fx:id="cmascota" alignment="CENTER" prefHeight="29.0" prefWidth="200.0" promptText="Telefono 55 2345 6789">
+                           <font>
+                              <Font name="Tahoma" size="15.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                  <TextField fx:id="cmascota1" alignment="CENTER" prefHeight="29.0" prefWidth="200.0" promptText="314237983" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Tahoma" size="15.0" />
+                     </font>
+                  </TextField>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <children>
+                        <TextField promptText="Teléfono de emergencia" />
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="70.0">
+               <children>
+                  <Button fx:id="register" mnemonicParsing="false" prefHeight="33.0" prefWidth="150.0" text="Guardar" />
+                  <Button mnemonicParsing="false" prefWidth="150.0" styleClass="button3" text="Limpiar" />
+                  <Button mnemonicParsing="false" prefWidth="150.0" styleClass="button2" text="Cancelar" />
+               </children>
+            </HBox>
+         </children>
+         <VBox.margin>
+            <Insets left="100.0" right="100.0" />
+         </VBox.margin>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

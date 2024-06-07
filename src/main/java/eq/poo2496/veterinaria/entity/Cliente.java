@@ -11,8 +11,9 @@ import lombok.EqualsAndHashCode;
 @AttributeOverride(name = "id", column = @Column(name = "numeroCliente"))
 public class Cliente extends Persona {
 
+
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "numeroMascota", referencedColumnName = "numeroMascota", unique = true, nullable = false)
+    @JoinColumn(name = "numeroMascota", referencedColumnName = "numeroMascota", unique = true, nullable = true)
     private Mascota mascota;
 
     @OneToOne(cascade = CascadeType.ALL)

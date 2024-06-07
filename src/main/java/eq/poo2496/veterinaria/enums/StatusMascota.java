@@ -1,8 +1,9 @@
 package eq.poo2496.veterinaria.enums;
 
 public enum StatusMascota {
-    CLIENTE,
+    CLIENTE(),
     ADOPCION,
     ADOPTADO,
-    DEVOLUCION
+    DEVOLUCION,
+
 }

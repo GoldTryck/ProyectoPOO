@@ -2,7 +2,7 @@ package eq.poo2496.veterinaria.util;
 
 import javafx.collections.FXCollections;
 import javafx.scene.control.*;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.Pane;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +37,7 @@ public class Utility {
         }
         return selected;
     }
-    public static <E extends Enum<E>> ToggleGroup loadRadioButtons(VBox vbox, Class<E> enumType) {
+    public static <E extends Enum<E>> ToggleGroup loadRadioButtons(Pane vbox, Class<E> enumType) {
         List<RadioButton> radioButtons = new ArrayList<>();
         ToggleGroup toggleGroup = new ToggleGroup();
 

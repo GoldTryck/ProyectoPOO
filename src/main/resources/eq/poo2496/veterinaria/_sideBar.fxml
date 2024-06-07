@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" prefHeight="700.0" prefWidth="200.0" spacing="10.0" styleClass="side_ankerpane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eq.poo2496.veterinaria.controller.sideBarController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="190.0">
+         <children>
+            <ToggleButton fx:id="mainMenu" mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" styleClass="btn_workbench1" text="Menú" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/coffee-svgrepo-com.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Tahoma Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </ToggleButton>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="550.0" prefWidth="190.0" spacing="20.0">
+         <children>
+            <ToggleButton fx:id="cliente" mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" text="Clientes" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@images/client.png" />
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Tahoma Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Glow />
+               </effect>
+            </ToggleButton>
+            <ToggleButton fx:id="mascota" mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" styleClass="btn_workbench2" stylesheets="@style.css" text="Mascotas" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="btn_workbench1" fitHeight="38.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@images/dog-svgrepo-com.png" />
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Glow />
+               </effect>
+            </ToggleButton>
+            <ToggleButton fx:id="personal" mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" styleClass="btn_workbench3" stylesheets="@style.css" text="Personal" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="btn_workbench11" fitHeight="38.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@images/veterinario.png" />
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Glow />
+               </effect>
+            </ToggleButton>
+            <ToggleButton fx:id="servicio" mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" styleClass="btn_workbench" stylesheets="@style.css" text="Servicios" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="btn_workbench2" fitHeight="43.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@images/servicio.png" />
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Glow />
+               </effect>
+            </ToggleButton>
+            <ToggleButton fx:id="consulta" mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" styleClass="btn_workbench2" stylesheets="@style.css" text="Consultas" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="btn_workbench12" fitHeight="38.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@images/consultas.png" />
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Glow />
+               </effect>
+            </ToggleButton>
+            <ToggleButton fx:id="paquete" mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" styleClass="btn_workbench3" stylesheets="@style.css" text="Paquetes" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="btn_workbench111" fitHeight="38.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@images/paquetes.png" />
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Glow />
+               </effect>
+            </ToggleButton>
+            <ToggleButton fx:id="pago" mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" styleClass="btn_workbench" stylesheets="@style.css" text="Pagos" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/client.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Tahoma Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Glow />
+               </effect>
+            </ToggleButton>
+         </children>
+      </VBox>
+      <VBox alignment="BOTTOM_CENTER" prefHeight="50.0" prefWidth="190.0">
+         <children>
+            <Button fx:id="salir" mnemonicParsing="false" onAction="#endApp" prefHeight="50.0" prefWidth="160.0" styleClass="button3" stylesheets="@style.css" text="Salir" textAlignment="CENTER" textFill="#434242">
+               <font>
+                  <Font name="Tahoma Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" top="10.0" />
+   </padding>
+</VBox>

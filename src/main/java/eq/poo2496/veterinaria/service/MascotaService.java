@@ -56,4 +56,7 @@ public class MascotaService {
 
     }
 
+    public void updateMascota(Mascota mascotaM) {
+        mascotaRepository.updateStatusByNumeroMascota(mascotaM.getNumeroMascota(), mascotaM.getStatus());
+    }
 }

@@ -2,8 +2,7 @@ package eq.poo2496.veterinaria.controller;
 
 import eq.poo2496.veterinaria.entity.Cliente;
 import eq.poo2496.veterinaria.entity.Mascota;
-import eq.poo2496.veterinaria.service.ClienteService;
-import eq.poo2496.veterinaria.service.MascotaService;
+import eq.poo2496.veterinaria.enums.StatusMascota;
 import eq.poo2496.veterinaria.util.Utility;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -11,29 +10,12 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 
 @Component
-public class ClienteController {
+public class clienteController extends personaController{
 
-    @Autowired
-    private ClienteService clienteS;
-    @Autowired
-    private MascotaService mascotaS;
-    @FXML
-    private TextField cnombre;
-    @FXML
-    private TextField cap;
-    @FXML
-    private TextField cam;
-    @FXML
-    private TextField ccurp;
-    @FXML
-    private DatePicker cfn;
-    @FXML
-    private TextField cmascota;
     @FXML
     private TableView<Mascota> tmascota;
     @FXML
@@ -42,38 +24,105 @@ public class ClienteController {
     private TableColumn<Mascota, String> mraza;
     @FXML
     private TableColumn<Mascota, String> mstatus;
-
-    private static Mascota mascota;
     @FXML
-    private void findMascota() {
-
-        mascota = mascotaS.getById(Long.parseLong(cmascota.getText()));
-        if(mascota != null){
-            Cliente cliente = clienteS.clienteByMascota(mascota);
-            if (cliente == null && !mascota.getStatus().equals("ADOPTADO")) {
-                ObservableList<Mascota> mascotaObservableList = FXCollections.observableArrayList();
-                mascotaObservableList.add(mascota);
-                tmascota.setItems(mascotaObservableList);
-                return;
-            }
-        }
-        Utility.showDialog("Mascota no encontrada","La mascota no esta disponible", Alert.AlertType.ERROR);
-    }
-
+    private Button register;
     @FXML
-
     public void initialize() {
         mnombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
         mraza.setCellValueFactory(new PropertyValueFactory<>("raza"));
         mstatus.setCellValueFactory(new PropertyValueFactory<>("status"));
 
+        validateCurp();
+        validateText(nombre);
+        validateText(ap);
+        validateText(am);
+        validateFn();
+
+        tmascota.getSelectionModel().
+                selectedItemProperty().
+                addListener((observable, oldValue, newValue) -> {
+                    if (observable != null) {
+                        validateFields();
+                    }
+                });
         cmascota.addEventFilter(KeyEvent.KEY_TYPED, event -> {
             String c = event.getCharacter();
             if (!c.matches("[0-9]")) {
                 event.consume();
             }
         });
+
+        register.setOnAction(event -> registerButton());
+
     }
 
+
+    public void validateFields(){
+        if(nombre.getStyle().equals(validated)
+                && ap.getStyle().equals(validated)
+                && am.getStyle().equals(validated)
+                && curp.getStyle().equals(validated)
+                && fn.getStyle().equals(validated)
+        ){
+
+            register.setDisable(false);
+        }else register.setDisable(true);
+    }
+
+
+
+    @FXML
+    public void registerButton() {
+        nombreS = nombre.getText();
+        apS = ap.getText();
+        amS = am.getText();
+        curpS = curp.getText();
+        fnD = getFechaNacimiento();
+        mascotaM = tmascota.getSelectionModel().getSelectedItem();
+
+        Cliente toBeSaved = new Cliente();
+
+        toBeSaved.setNombre(nombreS);
+        toBeSaved.setApellidoPaterno(apS);
+        toBeSaved.setApellidoMaterno(amS);
+        toBeSaved.setCurp(curpS);
+        toBeSaved.setFechaNacimiento(fnD);
+        toBeSaved.setMascota(mascotaM);
+        if(mascotaM.getStatus().equals("ADOPCION")){
+            mascotaM.setStatus(StatusMascota.ADOPTADO.toString());
+            mascotaS.updateMascota(mascotaM);
+        }
+        try{
+            Cliente saved = clienteS.saveCliente(toBeSaved);
+            Utility.showDialog("Registro Exitoso", "Cliente registrado con exito con id: " + saved.getId(), Alert.AlertType.INFORMATION);
+            clearFields();
+        }catch (Exception e) {
+            Utility.showDialog("Error al registrar", e.getMessage(), Alert.AlertType.ERROR);
+        }
+    }
+    @FXML
+    private void findMascota() {
+
+        mascotaM = mascotaS.getById(Long.parseLong(cmascota.getText()));
+        if(mascotaM != null){
+            Cliente cliente = clienteS.clienteByMascota(mascotaM);
+            if (cliente == null && !mascotaM.getStatus().equals("ADOPTADO")) {
+                ObservableList<Mascota> mascotaMObservableList = FXCollections.observableArrayList();
+                mascotaMObservableList.add(mascotaM);
+                tmascota.setItems(mascotaMObservableList);
+                return;
+            }
+        }
+        Utility.showDialog("Mascota no encontrada","La mascota no esta disponible", Alert.AlertType.ERROR);
+    }
+    private void clearFields(){
+        nombre.clear();
+        ap.clear();
+        am.clear();
+        curp.clear();
+        fn.setValue(null);
+        cmascota.clear();
+        tmascota.getItems().clear();
+    }
 
 }

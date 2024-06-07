@@ -4,13 +4,15 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import lombok.Getter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 public class Main extends Application {
-	public static ConfigurableApplicationContext context;
+	@Getter
+    public static ConfigurableApplicationContext context;
 	public static void main(String[] args) {
 		//SpringApplication.run(Main.class, args);
 		launch();
@@ -19,7 +21,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage stage) throws Exception {
 		context = SpringApplication.run(Main.class);
-		FXMLLoader fxml = new FXMLLoader(getClass().getResource("/eq/poo2496/veterinaria/main.fxml"));
+		FXMLLoader fxml = new FXMLLoader(getClass().getResource("/eq/poo2496/veterinaria/_main.fxml"));
 		fxml.setControllerFactory(context::getBean);
 
 		Scene scene = new Scene(fxml.load());

@@ -1,7 +1,24 @@
 .root{
     -fx-background-color: #2c2c2c;
 }
+.radio-button {
+    -fx-font-family: Tahoma;
+    -fx-font-size: 10px;
+}
+.check-box {
+    -fx-font-family: Tahoma;
+    -fx-font-size: 15px;
+}
+.table-view{
+    -fx-font-family: Tahoma;
+    -fx-font-size: 15px;
+}
 
+.text-field{
+    -fx-font-family: Tahoma;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
 .side_ankerpane{
     -fx-background-color:#353A56;
     -fx-border-width: 2px 2px 2px 2px;
@@ -28,21 +45,51 @@
     -fx-border-color: #748CF1;
 }
 
-.btn_workbench{
+.toggle-button{
     -fx-background-color:#141313;
     -fx-border-width: 2px 2px 2px 2px;
     -fx-border-radius: 50px;
     -fx-background-radius: 50px;
     -fx-border-style: solid;
     -fx-border-color: #141313;
+    -fx-font-family: Tahoma;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
 }
-.btn_workbench11{
+.toggle-button.btn_workbench1{
+    -fx-background-color:#a1b4c8;
+    -fx-border-color: #a1b4c8;
+}
+.toggle-button.btn_workbench2{
+    -fx-background-color:#748CF1;
+    -fx-border-color: #748CF1;
+}
+.toggle-button.btn_workbench3{
     -fx-background-color:#353A56;
     -fx-border-width: 2px 2px 2px 2px;
     -fx-border-radius: 50px;
     -fx-background-radius: 50px;
     -fx-border-style: solid;
     -fx-border-color: #353A56;
+}
+
+.button{
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-font-family: Tahoma;
+    -fx-font-size: 15px;
+    -fx-cursor: hand;
+
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-background-color: #d7f3a8;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-style: solid;
+    -fx-border-color: #d7f3a8;
+}
+.button:hover {
+    -fx-background-color: #819167; /* Cambiar el color de fondo al pasar el ratón */
+    -fx-border-color: #819167;
 }
 
 .pane_1{
@@ -101,21 +148,8 @@
 }
 
 
-.button {
-    -fx-text-fill: #3a3a3a;
-    -fx-cursor: hand;
-    -fx-font-size: 14px;
-    -fx-border-radius: 16px;
-    -fx-background-radius: 16px;
-    -fx-border-width: 2px 2px 2px 2px;
-    -fx-background-color: #d7f3a8;
-    -fx-border-style: solid;
-    -fx-border-color: #d7f3a8;
-}
-.button:hover {
-    -fx-background-color: #819167; /* Cambiar el color de fondo al pasar el ratón */
-    -fx-border-color: #819167;
-}
+
+
 .button.button2{
     -fx-background-color: #FD9999; /* Color de fondo */
     -fx-border-style: solid;
@@ -144,10 +178,15 @@
     -fx-border-style: solid;
 }
 .menu .menu-item {
-    -fx-background-color: #a1b4c8;
-    -fx-border-color: #a1b4c8;
-    -fx-border-radius: 20px;
-    -fx-background-radius: 20px;
+    -fx-text-fill: #3a3a3a;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+    -fx-border-radius: 0px;
+    -fx-background-radius: 0px;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-background-color: #d7f3a8;
     -fx-border-style: solid;
-    -fx-opacity: 0.5;
+    -fx-border-color: #d7f3a8;
+    -fx-padding: 0px 0px 0px 0px;
+    -fx-end-margin: 0px;
 }

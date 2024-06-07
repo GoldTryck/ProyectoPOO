@@ -10,13 +10,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="adpt" styleClass="pane_11" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eq.poo2496.veterinaria.controller.AdopcionController">
+<VBox fx:id="adpt" fx:controller="eq.poo2496.veterinaria.controller.AdopcionController" prefHeight="590.0" styleClass="pane_11" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
    <HBox fx:id="adptHeader" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
      <children>
-       <Label alignment="CENTER" prefHeight="29.0" prefWidth="881.0" text="Adopción de Mascotas" textFill="#361212">
+       <Label alignment="CENTER" prefHeight="29.0" prefWidth="881.0" text="Adopción de Mascotas">
          <font>
-             <Font name="Andale Mono" size="42.0" />
+             <Font name="Tahoma Bold" size="40.0" />
          </font>
        </Label>
      </children>
@@ -25,7 +25,10 @@
      <children>
        <VBox alignment="CENTER" prefHeight="533.0" prefWidth="884.0" spacing="5.0">
          <children>
-                  <Label text="Mascotas en Adopción" />
+                  <Label text="Mascotas en Adopción">
+                     <font>
+                        <Font name="Tahoma" size="15.0" />
+                     </font></Label>
                   <TableView fx:id="mtable" prefHeight="200.0" prefWidth="771.0">
                     <columns>
                       <TableColumn fx:id="numMascota" prefWidth="80.33319091796875" text="NumeroMascota" />
@@ -37,11 +40,14 @@
                         <Insets left="100.0" right="100.0" />
                      </VBox.margin>
                   </TableView>
-                  <Label text="Clientes" />
+                  <Label text="Clientes">
+                     <font>
+                        <Font name="Tahoma" size="15.0" />
+                     </font></Label>
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
-                        <TextField prefHeight="33.0" prefWidth="188.0" promptText="numeroCliente" />
-                        <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="84.0" styleClass="button3" text="Buscar" />
+                        <TextField fx:id="numeroB" prefHeight="33.0" prefWidth="188.0" promptText="NumeroCliente" />
+                        <Button fx:id="buscar" mnemonicParsing="false" prefHeight="33.0" prefWidth="84.0" styleClass="button3" text="Buscar" />
                      </children>
                      <VBox.margin>
                         <Insets left="100.0" right="100.0" />
@@ -52,10 +58,10 @@
                   </HBox>
                   <TableView fx:id="ctable" prefHeight="200.0" prefWidth="200.0">
                     <columns>
-                      <TableColumn prefWidth="75.0" text="NumeroCliente" />
-                      <TableColumn prefWidth="195.66656494140625" text="Nombre" />
-                        <TableColumn prefWidth="213.66673278808594" text="ApellidoPaterno" />
-                        <TableColumn prefWidth="183.0001220703125" text="ApellidoMaterno" />
+                      <TableColumn fx:id="numeroCliente" prefWidth="75.0" text="numeroCliente" />
+                      <TableColumn fx:id="nombre" prefWidth="195.66656494140625" text="nombre" />
+                        <TableColumn fx:id="apellidoPaterno" prefWidth="213.66673278808594" text="apellidoPaterno" />
+                        <TableColumn fx:id="apellidoMaterno" prefWidth="183.0001220703125" text="apellidoMaterno" />
                     </columns>
                      <VBox.margin>
                         <Insets left="100.0" right="100.0" />
@@ -63,7 +69,7 @@
                   </TableView>
           <HBox fx:id="campoRegistrar" alignment="CENTER" prefHeight="164.0" prefWidth="867.0">
            <children>
-             <Button alignment="CENTER" onAction="#adptButton" prefHeight="58.0" prefWidth="425.0" text="Adoptar Mascota">
+             <Button fx:id="adoptar" alignment="CENTER" prefHeight="58.0" prefWidth="425.0" text="Adoptar Mascota">
                <font>
                  <Font name="Andale Mono" size="28.0" />
                </font>
