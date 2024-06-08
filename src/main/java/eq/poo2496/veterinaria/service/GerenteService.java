@@ -6,6 +6,8 @@ import javafx.fxml.FXML;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class GerenteService {
     @Autowired
@@ -13,5 +15,25 @@ public class GerenteService {
 
     public Gerente persistGerente(Gerente gerente) {
         return gerenteRepository.save(gerente);
+    }
+
+    public List<Gerente> filterByNombre(String nombre) {
+        return gerenteRepository.findByNombre(nombre);
+    }
+
+    public List<Gerente> filterByAp(String ap) {
+        return gerenteRepository.findByApellidoPaterno(ap);
+    }
+
+    public List<Gerente> filterByAm(String am) {
+        return gerenteRepository.findByApellidoMaterno(am);
+    }
+
+    public List<Gerente> filterByCurp(String curp) {
+        return gerenteRepository.findByCurp(curp);
+    }
+
+    public void deleteGerente(Gerente gerente) {
+        gerenteRepository.delete(gerente);
     }
 }

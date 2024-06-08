@@ -25,18 +25,16 @@ public class clienteController extends personaController{
     @FXML
     private TableColumn<Mascota, String> mstatus;
     @FXML
-    private Button register;
-    @FXML
     public void initialize() {
         mnombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
         mraza.setCellValueFactory(new PropertyValueFactory<>("raza"));
         mstatus.setCellValueFactory(new PropertyValueFactory<>("status"));
 
-        validateCurp();
-        validateText(nombre);
-        validateText(ap);
-        validateText(am);
-        validateFn();
+        isValidCURP();
+        isValidText(nombre);
+        isValidText(ap);
+        isValidText(am);
+        isValidFn();
 
         tmascota.getSelectionModel().
                 selectedItemProperty().
@@ -77,7 +75,7 @@ public class clienteController extends personaController{
         apS = ap.getText();
         amS = am.getText();
         curpS = curp.getText();
-        fnD = getFechaNacimiento();
+        fnD = getFn();
         mascotaM = tmascota.getSelectionModel().getSelectedItem();
 
         Cliente toBeSaved = new Cliente();

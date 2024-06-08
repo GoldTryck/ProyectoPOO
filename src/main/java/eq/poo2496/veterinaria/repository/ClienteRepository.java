@@ -16,6 +16,7 @@ import java.util.Optional;
 public interface ClienteRepository extends JpaRepository<Cliente, Long> {
     Cliente findByMascota(Mascota mascota);
     List<Cliente> findAll();
+    @Override
     Optional<Cliente> findById(Long id);
 
     @Query("SELECT c FROM Cliente c WHERE c.mascota IS NULL")

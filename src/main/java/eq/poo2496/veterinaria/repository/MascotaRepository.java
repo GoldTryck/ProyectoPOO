@@ -16,5 +16,5 @@ public interface MascotaRepository extends JpaRepository<Mascota, Long> {
     @Transactional
     @Modifying
     @Query("UPDATE Mascota m SET m.status = :status WHERE m.numeroMascota = :numeroMascota")
-    int updateStatusByNumeroMascota(Long numeroMascota, String status);
+    void updateStatusByNumeroMascota(Long numeroMascota, String status);
 }

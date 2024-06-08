@@ -43,14 +43,5 @@ public class MainController {
             e.printStackTrace();
         }
     }
-    @FXML
-    public void cargaSide(String fxml) {
-        try {
-            dataPane.getChildren().clear();
-            SpringFXMLLoader.loadView(fxml, sidePane);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 
 }

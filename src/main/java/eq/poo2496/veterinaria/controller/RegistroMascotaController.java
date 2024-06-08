@@ -61,7 +61,7 @@ public class RegistroMascotaController extends Services {
     public void registerButton(){
         String nombre = campoNombre.getText();
         String raza = campoRaza.getText();
-        List<String> vacunas = Utility.getSelectedCB(vacunasListView);
+        List<String> vacunas = Utility.selectedCB(vacunasListView);
 
         if (nombre.isEmpty()
                 || raza.isEmpty()

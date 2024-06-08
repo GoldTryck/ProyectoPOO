@@ -60,13 +60,7 @@ public class ClienteService {
     }
 
 
-    public static boolean isValidCURP(String curp) {
-        String CURP_REGEX = "^[A-Z]{1}[AEIOU]{1}[A-Z]{2}\\d{2}(0[1-9]|1[0-2])(0[1-9]|[12]\\d|3[01])[HM](AS|BC|BS|CC|CL|CM|CS|CH|DF|DG|GT|GR|HG|JC|MC|MN|MS|NT|NL|OC|PL|QT|QR|SP|SL|SR|TC|TS|TL|VZ|YN|ZS|NE)[B-DF-HJ-NP-TV-Z]{3}[A-Z\\d]{1}[0-9]{1}$";
 
-        Pattern pattern = Pattern.compile(CURP_REGEX);
-        Matcher matcher = pattern.matcher(curp);
-        return matcher.matches();
-    }
 
     public List<Cliente> getByMascota() {
         return clienteRepository.getByMascota();

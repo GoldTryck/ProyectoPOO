@@ -1,20 +1,14 @@
 package eq.poo2496.veterinaria.controller;
 
-
 import eq.poo2496.veterinaria.entity.Cliente;
-import eq.poo2496.veterinaria.service.MascotaService;
 import eq.poo2496.veterinaria.entity.Mascota;
 import eq.poo2496.veterinaria.service.Services;
 import eq.poo2496.veterinaria.util.Utility;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

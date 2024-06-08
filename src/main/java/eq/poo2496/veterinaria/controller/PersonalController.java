@@ -8,39 +8,32 @@ import eq.poo2496.veterinaria.enums.Sucursal;
 import eq.poo2496.veterinaria.util.Utility;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
+
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.HBox;
-import org.springframework.stereotype.Component;
 
-import java.io.IOException;
+import org.springframework.stereotype.Component;
 
 @Component
 public class PersonalController extends personaController{
 
-    public TextField cedula;
     public TableView<Sucursal> tsucursal;
     public TableColumn<Sucursal, String> snombre;
     public TableColumn<Sucursal, String> szona;
-    @FXML
-    public HBox radiogroup;
-    @FXML
-    private Label vcedula;
+    public Label vcedula;
 
-    private static RadioButton sel;
-    private static ToggleGroup statusGroup;
+    private  RadioButton sel;
 
     public void initialize() {
 
             setRadiogroup();
             fillSucursalT();
-            validateCurp();
-            validateText(nombre);
-            validateText(ap);
-            validateText(am);
-            validateFn();
-            validateCedula();
+            isValidCURP();
+            isValidText(nombre);
+            isValidText(ap);
+            isValidText(am);
+            isValidFn();
+            isValidCedula();
             tableListener(tsucursal);
             registerButton();
 
@@ -69,7 +62,7 @@ public class PersonalController extends personaController{
             apS = ap.getText();
             amS = am.getText();
             curpS = curp.getText();
-            fnD = getFechaNacimiento();
+            fnD = getFn();
 
             if (sel.getText().equals("VETERINARIO")) {
                 cedulaS = cedula.getText();
@@ -77,7 +70,7 @@ public class PersonalController extends personaController{
                 Utility.showDialog("EXITO", "Veterinario registrado con id: " + saved.getId(), Alert.AlertType.INFORMATION);
 
             } else if (sel.getText().equals("GERENTE")) {
-                sucursal = (Sucursal) tsucursal.getSelectionModel().getSelectedItem();
+                sucursal = tsucursal.getSelectionModel().getSelectedItem();
                 Gerente saved = saveGerente();
                 Utility.showDialog("EXITO", "Gerente registrado con id: " + saved.getId(), Alert.AlertType.INFORMATION);
             }else{
@@ -89,7 +82,7 @@ public class PersonalController extends personaController{
 
     }
     private void setRadiogroup(){
-        statusGroup = Utility.loadRadioButtons(radiogroup, Empleado.class);
+        ToggleGroup statusGroup = Utility.loadRadioButtons(radiogroup, Empleado.class);
         statusGroup.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {
             sel = (RadioButton) newValue;
             if(sel.getText().equals("VETERINARIO")) {

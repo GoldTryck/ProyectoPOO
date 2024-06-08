@@ -28,7 +28,7 @@ public class Utility {
         listView.setItems(FXCollections.observableArrayList(checkboxes));
     }
 
-    private static List<String> selectedCB(ListView<CheckBox> selectedCB){
+    public static List<String> selectedCB(ListView<CheckBox> selectedCB){
         List<String> selected = new ArrayList<>();
         for (CheckBox checkBox : selectedCB.getItems()) {
             if (checkBox.isSelected()) {
@@ -52,7 +52,4 @@ public class Utility {
         return toggleGroup;
     }
 
-    public static List<String>getSelectedCB(ListView<CheckBox> listV){
-        return selectedCB(listV);
-    }
 }
