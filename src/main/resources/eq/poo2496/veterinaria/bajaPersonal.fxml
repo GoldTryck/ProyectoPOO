@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="root" fx:controller="eq.poo2496.veterinaria.controller.bajaPersonalController" prefHeight="590.0" prefWidth="900.0" spacing="10.0" styleClass="progress" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:id="root" prefHeight="590.0" prefWidth="900.0" spacing="10.0" styleClass="progress" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eq.poo2496.veterinaria.controller.bajaPersonalController">
    <children>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="622.0">
          <children>
@@ -51,7 +51,7 @@
                   </Label>
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="1">
                      <children>
-                        <TextField fx:id="nombre" alignment="CENTER" prefHeight="29.0" prefWidth="200.0" promptText="Nombre(s)">
+                        <TextField fx:id="nmbr" alignment="CENTER" prefHeight="29.0" prefWidth="200.0" promptText="Nombre(s)">
                            <font>
                               <Font name="Tahoma" size="15.0" />
                            </font>
@@ -109,12 +109,12 @@
                   </HBox>
                </children>
             </GridPane>
-            <TableView fx:id="tpersonal" prefHeight="156.0" prefWidth="516.0">
+            <TableView fx:id="persona" prefHeight="156.0" prefWidth="516.0">
               <columns>
-                <TableColumn fx:id="id" prefWidth="70.44158935546875" text="Id" />
-                <TableColumn fx:id="pnombre" prefWidth="122.55838012695312" text="Nombre" />
-                  <TableColumn fx:id="pap" prefWidth="164.16421508789062" text="Apellido paterno" />
-                  <TableColumn fx:id="pam" prefWidth="168.306640625" text="Apellido Materno" />
+                <TableColumn fx:id="tipo" prefWidth="110.333251953125" text="Categoría" />
+                <TableColumn fx:id="pnombre" prefWidth="150.6666259765625" text="Nombre" />
+                  <TableColumn fx:id="pap" prefWidth="165.6666259765625" text="Apellido paterno" />
+                  <TableColumn fx:id="pam" prefWidth="143.3333740234375" text="Apellido Materno" />
               </columns>
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -127,7 +127,7 @@
             </HBox>
          </children>
          <VBox.margin>
-            <Insets left="180.0" right="180.0" />
+            <Insets left="150.0" right="150.0" />
          </VBox.margin>
       </VBox>
    </children>

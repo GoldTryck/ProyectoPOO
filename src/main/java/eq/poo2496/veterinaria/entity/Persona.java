@@ -1,5 +1,6 @@
 package eq.poo2496.veterinaria.entity;
 
+import eq.poo2496.veterinaria.enums.TipoPersona;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -30,4 +31,6 @@ public class Persona {
 
     @Column(name = "curp", length = 19, unique = true, nullable = false)
     private String curp;
+    @Column(name = "tipo", nullable = false)
+    private TipoPersona tipo;
 }

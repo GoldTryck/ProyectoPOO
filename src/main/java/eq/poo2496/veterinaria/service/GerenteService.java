@@ -36,4 +36,8 @@ public class GerenteService {
     public void deleteGerente(Gerente gerente) {
         gerenteRepository.delete(gerente);
     }
+
+    public List<Gerente> getAll() {
+        return gerenteRepository.findAll();
+    }
 }

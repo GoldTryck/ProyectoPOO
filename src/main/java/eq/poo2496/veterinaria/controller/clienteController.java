@@ -31,7 +31,7 @@ public class clienteController extends personaController{
         mstatus.setCellValueFactory(new PropertyValueFactory<>("status"));
 
         isValidCURP();
-        isValidText(nombre);
+        isValidText(nmbr);
         isValidText(ap);
         isValidText(am);
         isValidFn();
@@ -56,7 +56,7 @@ public class clienteController extends personaController{
 
 
     public void validateFields(){
-        if(nombre.getStyle().equals(validated)
+        if(nmbr.getStyle().equals(validated)
                 && ap.getStyle().equals(validated)
                 && am.getStyle().equals(validated)
                 && curp.getStyle().equals(validated)
@@ -71,27 +71,23 @@ public class clienteController extends personaController{
 
     @FXML
     public void registerButton() {
-        nombreS = nombre.getText();
+        nombreS = nmbr.getText();
         apS = ap.getText();
         amS = am.getText();
         curpS = curp.getText();
         fnD = getFn();
         mascotaM = tmascota.getSelectionModel().getSelectedItem();
 
-        Cliente toBeSaved = new Cliente();
-
-        toBeSaved.setNombre(nombreS);
-        toBeSaved.setApellidoPaterno(apS);
-        toBeSaved.setApellidoMaterno(amS);
-        toBeSaved.setCurp(curpS);
-        toBeSaved.setFechaNacimiento(fnD);
-        toBeSaved.setMascota(mascotaM);
-        if(mascotaM.getStatus().equals("ADOPCION")){
+        if(mascotaM != null){
+            if (mascotaM.getStatus().equals("ADOPCION") || mascotaM.getStatus().equals("DEVOLUCION")) {
+                mascotaM.setStatus("ADOPTADO");
+                mascotaS.updateMascota(mascotaM);
+            }
             mascotaM.setStatus(StatusMascota.ADOPTADO.toString());
             mascotaS.updateMascota(mascotaM);
         }
         try{
-            Cliente saved = clienteS.saveCliente(toBeSaved);
+            Cliente saved = saveCliente();
             Utility.showDialog("Registro Exitoso", "Cliente registrado con exito con id: " + saved.getId(), Alert.AlertType.INFORMATION);
             clearFields();
         }catch (Exception e) {
@@ -113,8 +109,9 @@ public class clienteController extends personaController{
         }
         Utility.showDialog("Mascota no encontrada","La mascota no esta disponible", Alert.AlertType.ERROR);
     }
-    private void clearFields(){
-        nombre.clear();
+    @Override
+    public void clearFields(){
+        nmbr.clear();
         ap.clear();
         am.clear();
         curp.clear();

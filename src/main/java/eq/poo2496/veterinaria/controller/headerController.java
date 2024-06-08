@@ -28,7 +28,7 @@ public class headerController {
         mainController.cargaData("/eq/poo2496/veterinaria/bajaPersonal.fxml");
     }
     public void consultaPersonal() {
-        mainController.cargaData("/eq/poo2496/veterinaria/personalConsulta.fxml");
+        mainController.cargaData("/eq/poo2496/veterinaria/consultaPersonal.fxml");
     }
 
     //Metodos para cargar las vistas de Servicio

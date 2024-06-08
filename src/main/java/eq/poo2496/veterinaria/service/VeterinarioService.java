@@ -35,4 +35,8 @@ public class VeterinarioService  {
     public void deleteVeterinario(Veterinario veterinario) {
         veterinarioRepository.delete(veterinario);
     }
+
+    public List<Veterinario> getAll() {
+        return veterinarioRepository.findAll();
+    }
 }

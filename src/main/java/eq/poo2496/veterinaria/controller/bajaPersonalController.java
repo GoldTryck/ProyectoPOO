@@ -6,7 +6,6 @@ import javafx.collections.FXCollections;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
 import org.springframework.stereotype.Component;
 
 import java.util.*;
@@ -22,27 +21,18 @@ public class bajaPersonalController extends personaController {
     public Button byAm;
     @FXML
     public Button byCurp;
-    @FXML
-    public TableView<Persona> tpersonal;
-    @FXML
-    public TableColumn<Persona, Long> id;
-    @FXML
-    public TableColumn<Persona, String> pnombre;
-    @FXML
-    public TableColumn<Persona, String> pap;
-    @FXML
-    public TableColumn<Persona, String> pam;
 
     private final List<Persona> combinedList = new ArrayList<>();
 
     public void initialize() {
         mapTable();
-        isValidText(nombre);
+        isValidText(nmbr);
         isValidText(ap);
         isValidText(am);
         isValidCURP();
-        tableListener(tpersonal);
+        tableListener(persona);
         searchLogic();
+        validateFields();
         register.setOnAction(event -> registerButton());
     }
 
@@ -59,30 +49,26 @@ public class bajaPersonalController extends personaController {
         combinedList.addAll(veterinarios);
         combinedList.addAll(gerentes);
 
-        tpersonal.setItems(FXCollections.observableArrayList(combinedList));
+        persona.setItems(FXCollections.observableArrayList(combinedList));
 
         clearFields();
     }
 
-    private void mapTable() {
-        id.setCellValueFactory(new PropertyValueFactory<>("id"));
-        pnombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
-        pap.setCellValueFactory(new PropertyValueFactory<>("apellidoPaterno"));
-        pam.setCellValueFactory(new PropertyValueFactory<>("apellidoMaterno"));
-    }
-
     @Override
     void validateFields() {
-        byNombre.setDisable(!nombre.getStyle().equals(validated));
+        byNombre.setDisable(!nmbr.getStyle().equals(validated));
         byAp.setDisable(!ap.getStyle().equals(validated));
         byAm.setDisable(!am.getStyle().equals(validated));
         byCurp.setDisable(!curp.getStyle().equals(validated));
-        register.setDisable(tpersonal.getSelectionModel().getSelectedItem() == null);
+        register.setDisable(
+                persona
+                .getSelectionModel()
+                .getSelectedItem() == null);
     }
 
     @Override
     void registerButton() {
-        Persona selected = tpersonal.getSelectionModel().getSelectedItem();
+        Persona selected = persona.getSelectionModel().getSelectedItem();
         if (selected instanceof Asistente) {
             asistenteS.deleteAsistente((Asistente) selected);
             Utility.showDialog("EXITO",
@@ -99,20 +85,14 @@ public class bajaPersonalController extends personaController {
                     "Gerente eliminado con id: " + selected.getId(),
                     Alert.AlertType.INFORMATION);
         }
-        tpersonal.getItems().remove(selected);
+        persona.getItems().remove(selected);
     }
 
-    private void clearFields() {
-        nombre.clear(); nombre.setStyle(null);
-        ap.clear(); ap.setStyle(null);
-        am.clear(); am.setStyle(null);
-        curp.clear(); curp.setStyle(null);
-    }
     private void searchLogic(){
         byNombre.setOnAction(event -> handleSearch(() ->
-                asistenteS.filterByNombre(nombre.getText()), () ->
-                veterinarioS.filterByNombre(nombre.getText()), () ->
-                gerenteS.filterByNombre(nombre.getText())));
+                asistenteS.filterByNombre(nmbr.getText()), () ->
+                veterinarioS.filterByNombre(nmbr.getText()), () ->
+                gerenteS.filterByNombre(nmbr.getText())));
 
         byAp.setOnAction(event -> handleSearch(() ->
                 asistenteS.filterByAp(ap.getText()), () ->

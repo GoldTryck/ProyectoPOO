@@ -37,7 +37,7 @@ public class Utility {
         }
         return selected;
     }
-    public static <E extends Enum<E>> ToggleGroup loadRadioButtons(Pane vbox, Class<E> enumType) {
+    public static <E extends Enum<E>> ToggleGroup loadRadioButtons(Pane pane, Class<E> enumType) {
         List<RadioButton> radioButtons = new ArrayList<>();
         ToggleGroup toggleGroup = new ToggleGroup();
 
@@ -48,7 +48,7 @@ public class Utility {
             radioButtons.add(radioButton);
         }
 
-        vbox.getChildren().addAll(radioButtons);
+        pane.getChildren().addAll(radioButtons);
         return toggleGroup;
     }
 

@@ -81,7 +81,7 @@
                <children>
                   <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
                      <children>
-                        <TextField fx:id="nombre" alignment="CENTER" prefHeight="29.0" prefWidth="235.0" promptText="Nombre(s)">
+                        <TextField fx:id="nmbr" alignment="CENTER" prefHeight="29.0" prefWidth="235.0" promptText="Nombre(s)">
                            <font>
                               <Font name="Tahoma" size="15.0" />
                            </font>

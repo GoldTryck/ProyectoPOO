@@ -36,4 +36,8 @@ public class AsistenteService {
     public void deleteAsistente(Asistente asistente) {
         asistenteRepository.delete(asistente);
     }
+
+    public List<Asistente> getAll() {
+        return asistenteRepository.findAll();
+    }
 }

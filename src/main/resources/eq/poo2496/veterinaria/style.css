@@ -3,13 +3,17 @@
 }
 .radio-button {
     -fx-font-family: Tahoma;
-    -fx-font-size: 10px;
+    -fx-font-size: 15px;
 }
 .check-box {
     -fx-font-family: Tahoma;
     -fx-font-size: 15px;
 }
 .table-view{
+    -fx-font-family: Tahoma;
+    -fx-font-size: 15px;
+}
+.text-area{
     -fx-font-family: Tahoma;
     -fx-font-size: 15px;
 }

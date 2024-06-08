@@ -12,8 +12,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 @Service
 public class ClienteService {
@@ -42,7 +40,7 @@ public class ClienteService {
     }
 
     @Transactional
-    public Cliente saveCliente(Cliente cliente) {
+    public Cliente persistCliente(Cliente cliente) {
         Mascota mascota = cliente.getMascota();
         if (mascota != null && mascota.getNumeroMascota() != null) {
             Mascota attachedMascota = mascotaService.getById(mascota.getNumeroMascota());

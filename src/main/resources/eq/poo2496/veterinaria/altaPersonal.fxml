@@ -27,7 +27,7 @@
       </HBox>
       <VBox prefHeight="491.0" prefWidth="622.0" spacing="20.0">
          <children>
-            <HBox fx:id="radiogroup" alignment="CENTER" prefHeight="32.0" prefWidth="576.0" spacing="15.0">
+            <HBox fx:id="radioPane" alignment="CENTER" prefHeight="32.0" prefWidth="576.0" spacing="15.0">
                <children>
                   <Label prefHeight="19.0" prefWidth="117.0" text="Tipo personal: ">
                      <font>
@@ -61,7 +61,7 @@
                         <Font name="Tahoma" size="15.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="nombre" alignment="CENTER" prefHeight="25.0" prefWidth="420.0" promptText="Nombre(s)" GridPane.columnIndex="1">
+                  <TextField fx:id="nmbr" alignment="CENTER" prefHeight="25.0" prefWidth="420.0" promptText="Nombre(s)" GridPane.columnIndex="1">
                      <font>
                         <Font name="Tahoma" size="15.0" />
                      </font>

@@ -2,15 +2,19 @@ package eq.poo2496.veterinaria.controller;
 
 import eq.poo2496.veterinaria.entity.*;
 import eq.poo2496.veterinaria.enums.Sucursal;
+import eq.poo2496.veterinaria.enums.TipoPersona;
 import eq.poo2496.veterinaria.service.Services;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.layout.HBox;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.Pane;
 
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.ZoneId;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -18,7 +22,7 @@ abstract class personaController extends Services {
     @FXML
     public Button register;
     @FXML
-    public TextField nombre;
+    public TextField nmbr;
     @FXML
     public TextField ap;
     @FXML
@@ -36,6 +40,18 @@ abstract class personaController extends Services {
     @FXML
     public Sucursal sucursal;
 
+    @FXML
+    public TableView<Persona> persona;
+    @FXML
+    public TableColumn<Persona, TipoPersona> tipo;
+    @FXML
+    public TableColumn<Persona, String> pnombre;
+    @FXML
+    public TableColumn<Persona, String> pap;
+    @FXML
+    public TableColumn<Persona, String> pam;
+
+
     public static String nombreS;
     public static String apS;
     public static String amS;
@@ -43,8 +59,9 @@ abstract class personaController extends Services {
     public static Date fnD;
     public static Mascota mascotaM;
     public static String cedulaS;
+    List<Persona> combinedList = new ArrayList<>();
     @FXML
-    public HBox radiogroup;
+    public Pane radioPane;
 
     protected static final String validated = "-fx-border-color: green";
     protected static final String notValidated = "-fx-border-color: red";
@@ -126,6 +143,25 @@ abstract class personaController extends Services {
                     }
                 });
     }
+    public void mapTable() {
+        tipo.setCellValueFactory(new PropertyValueFactory<>("tipo"));
+        pnombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
+        pap.setCellValueFactory(new PropertyValueFactory<>("apellidoPaterno"));
+        pam.setCellValueFactory(new PropertyValueFactory<>("apellidoMaterno"));
+    }
+
+    protected Cliente saveCliente(){
+        Cliente cliente = new Cliente();
+        cliente.setNombre(nombreS);
+        cliente.setApellidoPaterno(apS);
+        cliente.setApellidoMaterno(amS);
+        cliente.setCurp(curpS);
+        cliente.setFechaNacimiento(fnD);
+        cliente.setTipo(TipoPersona.CLIENTE);
+        cliente.setMascota(mascotaM);
+        clienteS.persistCliente(cliente);
+        return cliente;
+    }
     protected Asistente saveAsistente(){
         Asistente asistente = new Asistente();
         asistente.setNombre(nombreS);
@@ -133,6 +169,7 @@ abstract class personaController extends Services {
         asistente.setApellidoMaterno(amS);
         asistente.setCurp(curpS);
         asistente.setFechaNacimiento(fnD);
+        asistente.setTipo(TipoPersona.ASISTENTE);
         asistenteS.persistAsistente(asistente);
         return asistente;
     }
@@ -143,6 +180,7 @@ abstract class personaController extends Services {
         gerente.setApellidoMaterno(amS);
         gerente.setCurp(curpS);
         gerente.setFechaNacimiento(fnD);
+        gerente.setTipo(TipoPersona.GERENTE);
         gerente.setSucursal(sucursal);
         gerenteS.persistGerente(gerente);
         return gerente;
@@ -154,8 +192,16 @@ abstract class personaController extends Services {
         veterinario.setApellidoMaterno(amS);
         veterinario.setCurp(curpS);
         veterinario.setFechaNacimiento(fnD);
+        veterinario.setTipo(TipoPersona.VETERINARIO);
         veterinario.setCedula(cedulaS);
         veterinarioS.persistVeterinario(veterinario);
         return veterinario;
+    }
+
+    public void clearFields() {
+        nmbr.clear(); nmbr.setStyle(null);
+        ap.clear(); ap.setStyle(null);
+        am.clear(); am.setStyle(null);
+        curp.clear(); curp.setStyle(null);
     }
 }

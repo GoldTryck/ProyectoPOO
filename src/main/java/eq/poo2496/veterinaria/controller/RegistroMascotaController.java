@@ -22,7 +22,7 @@ public class RegistroMascotaController extends Services {
     public TextField campoRaza;
     public TextField idCliente;
     public ListView<CheckBox> vacunasListView;
-    public HBox statusRadio;
+    public Pane statusRadio;
     public Button buscarC;
     public Button register;
     public Pane busqueda;
@@ -66,12 +66,14 @@ public class RegistroMascotaController extends Services {
         if (nombre.isEmpty()
                 || raza.isEmpty()
                 || statusGroup.getSelectedToggle() == null
-                || (((sel.getText().equals("CLIENTE")
-                || sel.getText().equals("ADOPTADO")
-                && tcliente.getSelectionModel().getSelectedItem() == null)))) {
-            Utility.showDialog("Error", "Por favor ingrese todos los datos de la mascota", Alert.AlertType.WARNING);
+                || ((sel.getText().equals("CLIENTE") || sel.getText().equals("ADOPTADO"))
+                && tcliente.getSelectionModel().getSelectedItem() == null)) {
+            Utility.showDialog("Error",
+                    "Por favor ingrese todos los datos de la mascota",
+                    Alert.AlertType.WARNING);
             return;
         }
+
         String status = ((RadioButton) statusGroup.getSelectedToggle()).getText();
         Mascota saved = mascotaS.registrarMascota(nombre, raza, vacunas, status);
         if(sel.getText().equals("CLIENTE") || sel.getText().equals("ADOPTADO")){
