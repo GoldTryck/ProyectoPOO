@@ -17,7 +17,7 @@ public class sideBarController{
     public ToggleButton mascota;
     public ToggleButton personal;
     public ToggleButton servicio;
-    public ToggleButton consulta;
+    public ToggleButton cita;
     public Button salir;
     public ToggleButton pago;
     public ToggleButton paquete;
@@ -31,9 +31,11 @@ public class sideBarController{
         mascota.setOnAction(actionEvent -> mainC.cargaMenu("/eq/poo2496/veterinaria/menuMascota.fxml"));
         personal.setOnAction(actionEvent -> mainC.cargaMenu("/eq/poo2496/veterinaria/menuPersonal.fxml"));
         servicio.setOnAction(actionEvent -> mainC.cargaMenu("/eq/poo2496/veterinaria/menuServicio.fxml"));
-        consulta.setOnAction(actionEvent -> mainC.cargaMenu("/eq/poo2496/veterinaria/menuConsulta.fxml"));
+        cita.setOnAction(actionEvent -> mainC.cargaMenu("/eq/poo2496/veterinaria/menuCita.fxml"));
         //pago.setOnAction(actionEvent -> loadMenu("/eq/poo2496/veterinaria/pagoMenu.fxml"));
-        //paquete.setOnAction(actionEvent -> loadMenu("/eq/poo2496/veterinaria/paqueteMenu.fxml"));
+        paquete.setOnAction(actionEvent -> {
+            mainC.cargaMenu("/eq/poo2496/veterinaria/menuPaquete.fxml");
+        });
 
     }
     @FXML

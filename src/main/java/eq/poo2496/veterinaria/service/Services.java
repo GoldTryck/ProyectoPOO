@@ -19,5 +19,11 @@ public abstract class Services {
     protected GerenteService gerenteS;
     @Autowired
     protected VeterinarioService veterinarioS;
+    @Autowired
+    protected ServicioIndividualService servicioIndividualS;
+    @Autowired
+    protected ServicioService servicioS;
+    @Autowired
+    protected PaqueteService paqueteS;
 
 }

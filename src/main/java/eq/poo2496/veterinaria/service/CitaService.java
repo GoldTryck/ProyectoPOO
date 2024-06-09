@@ -10,6 +10,7 @@ import java.util.List;
 
 public class CitaService {
 
+    /*
     private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("miUnidadDePersistencia");
 
     public Cita agendarCita(Date fechaHora, Long numeroCliente, Long numeroMascota,
@@ -77,5 +78,6 @@ public class CitaService {
             em.close();
         }
     }
+     */
 }
 

@@ -35,4 +35,9 @@ public class headerController {
     public void altaServicio() {
         mainController.cargaData("/eq/poo2496/veterinaria/altaServicio.fxml");
     }
+    public void editarServicio(){ mainController.cargaData("/eq/poo2496/veterinaria/editarServicio.fxml");}
+    public void consultaServicio(){ mainController.cargaData("/eq/poo2496/veterinaria/consultaServicio.fxml");}
+
+    public void altaPaquete(){mainController.cargaData("/eq/poo2496/veterinaria/altaPaquete.fxml");}
+    public void consultaPaquete(){mainController.cargaData("/eq/poo2496/veterinaria/consultaPaquete.fxml");}
 }

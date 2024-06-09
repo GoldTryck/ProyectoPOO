@@ -7,9 +7,7 @@ import lombok.Data;
 import java.util.Date;
 
 @Data // Lombok annotation to generate getters and setters
-//@Entity // JPA annotation to specify that this class is an entity
 @MappedSuperclass // JPA annotation to specify that this class is a superclass
-//@Table(name = "tPersona") // JPA annotation to specify the table name
 public class Persona {
 
     @Id

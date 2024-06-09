@@ -7,8 +7,8 @@ import java.util.Date;
 import java.util.List;
 
 @Data
-@Table(name = "tCita")
 @Entity
+@Table(name = "tCita")
 public class Cita {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,10 +22,6 @@ public class Cita {
     @JoinColumn(name = "numeroCliente")
     private Cliente cliente;
 
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "numeroMascota")
-    private Mascota mascota;
-
     @ManyToOne
     @JoinColumn(name = "numeroVeterinario")
     private Veterinario veterinario;
@@ -34,14 +30,14 @@ public class Cita {
     @JoinColumn(name = "numeroAsistente")
     private Asistente asistente;
 
-    @Column(nullable = false)
+    @Column(name = "descripcionServicio", length = 100)
     private String descripcionServicio;
 
     @ManyToMany
     @JoinTable(
-            name = "citaPaquete",
-            joinColumns = @JoinColumn(name = "numeroCita"),
-            inverseJoinColumns = @JoinColumn(name = "idPaquete")
+            name = "citaServicio",
+            joinColumns = @JoinColumn(name = "idCita"),
+            inverseJoinColumns = @JoinColumn(name = "idServicio")
     )
-    private List<Paquete> paquetes;
+    private List<Servicio> servicios;
 }

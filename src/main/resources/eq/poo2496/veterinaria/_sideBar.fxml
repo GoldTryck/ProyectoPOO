@@ -97,7 +97,7 @@
                   <Glow />
                </effect>
             </ToggleButton>
-            <ToggleButton fx:id="consulta" mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" styleClass="btn_workbench2" stylesheets="@style.css" text="Consultas" textAlignment="RIGHT" textFill="WHITE">
+            <ToggleButton fx:id="cita" mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" styleClass="btn_workbench2" stylesheets="@style.css" text="Citas" textAlignment="RIGHT" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
