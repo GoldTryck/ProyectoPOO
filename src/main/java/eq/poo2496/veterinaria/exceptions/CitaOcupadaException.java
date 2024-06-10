@@ -1,3 +1,4 @@
+/*Author: Hector Larios Ponce*/
 package eq.poo2496.veterinaria.exceptions;
 
 public class CitaOcupadaException extends Exception {

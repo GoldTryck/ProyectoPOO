@@ -1,6 +1,6 @@
 /*Autor: Julio Cesar Medrano Reyes
-Descripcio:
-* */
+Descripcion:
+ */
 package eq.poo2496.veterinaria.entity;
 
 import jakarta.persistence.*; // Importa las anotaciones de Jakarta Persistence
