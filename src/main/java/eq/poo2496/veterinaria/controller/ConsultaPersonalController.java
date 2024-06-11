@@ -35,7 +35,7 @@ public class ConsultaPersonalController extends personaController{
         combinedList.addAll(veterinarios);
         combinedList.addAll(gerentes);
 
-        persona.setItems(FXCollections.observableArrayList(combinedList));
+        persona.setItems(combinedList);
     }
     private void fillByCategory(){
         combinedList.clear();

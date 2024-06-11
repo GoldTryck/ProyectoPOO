@@ -4,6 +4,8 @@ import eq.poo2496.veterinaria.entity.*;
 import eq.poo2496.veterinaria.enums.Sucursal;
 import eq.poo2496.veterinaria.enums.TipoPersona;
 import eq.poo2496.veterinaria.service.Services;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -30,7 +32,7 @@ abstract class personaController extends Services {
     @FXML
     public TextField curp;
     @FXML
-    public DatePicker fn;
+    public DatePicker fecha;
     @FXML
     public TextField cedula;
     @FXML
@@ -59,7 +61,7 @@ abstract class personaController extends Services {
     public static Date fnD;
     public static Mascota mascotaM;
     public static String cedulaS;
-    List<Persona> combinedList = new ArrayList<>();
+    public ObservableList<Persona> combinedList = FXCollections.observableArrayList();
     @FXML
     public Pane radioPane;
 
@@ -70,8 +72,8 @@ abstract class personaController extends Services {
     @FXML
     abstract void registerButton();
 
-    protected Date getFn() {
-        LocalDate localDate = fn.getValue();
+    protected Date getFecha() {
+        LocalDate localDate = fecha.getValue();
         if (localDate != null) {
             return Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
         }
@@ -109,9 +111,9 @@ abstract class personaController extends Services {
             validateFields();
         });
     }
-    protected void isValidFn(){
-        fn.valueProperty().addListener((observable, oldValue, newValue) -> {
-            isValidDate(fn, newValue);
+    protected void dateListener(){
+        fecha.valueProperty().addListener((observable, oldValue, newValue) -> {
+            isValidDate(fecha, newValue);
             validateFields();
         });
     }

@@ -34,7 +34,7 @@ public class clienteController extends personaController{
         isValidText(nmbr);
         isValidText(ap);
         isValidText(am);
-        isValidFn();
+        dateListener();
 
         tmascota.getSelectionModel().
                 selectedItemProperty().
@@ -60,7 +60,7 @@ public class clienteController extends personaController{
                 && ap.getStyle().equals(validated)
                 && am.getStyle().equals(validated)
                 && curp.getStyle().equals(validated)
-                && fn.getStyle().equals(validated)
+                && fecha.getStyle().equals(validated)
         ){
 
             register.setDisable(false);
@@ -75,7 +75,7 @@ public class clienteController extends personaController{
         apS = ap.getText();
         amS = am.getText();
         curpS = curp.getText();
-        fnD = getFn();
+        fnD = getFecha();
         mascotaM = tmascota.getSelectionModel().getSelectedItem();
 
         if(mascotaM != null){
@@ -115,7 +115,7 @@ public class clienteController extends personaController{
         ap.clear();
         am.clear();
         curp.clear();
-        fn.setValue(null);
+        fecha.setValue(null);
         cmascota.clear();
         tmascota.getItems().clear();
     }

@@ -29,7 +29,7 @@ public class PersonalController extends personaController {
         isValidText(nmbr);
         isValidText(ap);
         isValidText(am);
-        isValidFn();
+        dateListener();
         isValidCedula();
         tableListener(tsucursal);
         register.setOnAction(event -> registerButton());
@@ -42,7 +42,7 @@ public class PersonalController extends personaController {
                         ap.getStyle().equals(validated) &&
                         am.getStyle().equals(validated) &&
                         curp.getStyle().equals(validated) &&
-                        fn.getStyle().equals(validated) &&
+                        fecha.getStyle().equals(validated) &&
                         (!cedula.isVisible() || cedula.getStyle().equals(validated)) &&
                         (!tsucursal.isVisible() || !tsucursal.getSelectionModel().getSelectedItems().isEmpty()) &&
                         radioGroup.getSelectedToggle() != null;
@@ -56,7 +56,7 @@ public class PersonalController extends personaController {
         apS = ap.getText();
         amS = am.getText();
         curpS = curp.getText();
-        fnD = getFn();
+        fnD = getFecha();
 
         sel = (RadioButton) radioGroup.getSelectedToggle();
 

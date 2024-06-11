@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="590.0" prefWidth="900.0" spacing="10.0" styleClass="progress" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eq.poo2496.veterinaria.controller.ConsultaCitaController">
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <HBox alignment="CENTER" prefHeight="61.0" prefWidth="876.0">
+      <Label alignment="CENTER" styleClass="container" text="Agendar Cita">
+         <font>
+            <Font name="Tahoma Bold" size="40.0" />
+         </font>
+      </Label>
+   </HBox>
+   <VBox alignment="TOP_CENTER" prefHeight="551.0" prefWidth="876.0" spacing="10.0">
+      <VBox.margin>
+         <Insets />
+      </VBox.margin>
+      <TableView fx:id="citas" nodeOrientation="LEFT_TO_RIGHT" prefHeight="408.0" prefWidth="876.0">
+         <columns>
+            <TableColumn fx:id="id" editable="false" maxWidth="200.0" minWidth="-1.0" prefWidth="62.36408996582031" sortable="false" text="Id" />
+            <TableColumn fx:id="idCliente" editable="false" maxWidth="411.6358337402344" minWidth="-1.0" prefWidth="103.75907897949219" sortable="false" text="Id Cliente" />
+            <TableColumn fx:id="idAsistente" editable="false" maxWidth="530.5751953125" minWidth="-1.0" prefWidth="102.47077941894531" sortable="false" text="Id Asistente" />
+            <TableColumn fx:id="idVeterinario" editable="false" maxWidth="606.8132629394531" minWidth="-1.0" prefWidth="111.57244873046875" resizable="false" sortable="false" text="Id Veterinario" />
+            <TableColumn fx:id="fechaHora" editable="false" maxWidth="588.5096130371094" minWidth="-1.0" prefWidth="130.11849975585938" sortable="false" text="Fecha y hora" />
+            <TableColumn fx:id="precio" editable="false" maxWidth="530.5751953125" minWidth="-1.0" prefWidth="99.6365966796875" sortable="false" text="Costo" />
+            <TableColumn fx:id="descripcion" editable="false" maxWidth="530.5751953125" minWidth="-1.0" prefWidth="244.86346435546875" sortable="false" text="Descripción" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </VBox>
+</VBox>

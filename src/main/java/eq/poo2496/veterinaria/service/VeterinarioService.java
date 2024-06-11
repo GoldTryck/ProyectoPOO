@@ -39,4 +39,8 @@ public class VeterinarioService  {
     public List<Veterinario> getAll() {
         return veterinarioRepository.findAll();
     }
+
+    public Veterinario getById(Long id) {
+        return veterinarioRepository.findById(id).orElse(null);
+    }
 }

@@ -5,7 +5,7 @@
 
 <HBox alignment="CENTER" prefHeight="60.0" prefWidth="900.0" spacing="50.0" styleClass="inner_pane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eq.poo2496.veterinaria.controller.headerController">
    <children>
-      <Button fx:id="registro" onAction="#altaPaquete" mnemonicParsing="false" prefHeight="31.0" prefWidth="170.0" styleClass="button3" text="Registro Paquetes" />
-      <Button fx:id="consulta" onAction="#consultaPaquete" mnemonicParsing="false" prefWidth="170.0" text="Consulta Paquetes" />
+      <Button fx:id="registro" mnemonicParsing="false" onAction="#altaPaquete" prefHeight="31.0" prefWidth="170.0" styleClass="button2" text="Registro Paquetes" />
+      <Button fx:id="consulta" mnemonicParsing="false" onAction="#consultaPaquete" prefWidth="170.0" styleClass="button2" text="Consulta Paquetes" />
    </children>
 </HBox>

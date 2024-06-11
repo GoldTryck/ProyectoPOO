@@ -25,5 +25,7 @@ public abstract class Services {
     protected ServicioService servicioS;
     @Autowired
     protected PaqueteService paqueteS;
+    @Autowired
+    protected CitaService citaS;
 
 }

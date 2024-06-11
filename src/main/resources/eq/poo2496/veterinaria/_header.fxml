@@ -17,12 +17,12 @@
    </ImageView>
    <VBox alignment="TOP_CENTER" prefHeight="56.0" prefWidth="565.0">
       <children>
-         <Text fill="#434242" strokeType="OUTSIDE" strokeWidth="0.0" text="MASCOTITAS" textAlignment="CENTER" wrappingWidth="565.3020421819475">
+         <Text fill="#949494" strokeType="OUTSIDE" strokeWidth="0.0" text="MASCOTITAS" textAlignment="CENTER" wrappingWidth="565.3020421819475">
             <font>
                <Font name="System Bold" size="30.0" />
             </font>
          </Text>
-         <Text accessibleRole="TEXT_FIELD" fill="#434242" strokeType="OUTSIDE" strokeWidth="0.0" text="Proyecto Programación Orientada a Objetos" textAlignment="CENTER" wrappingWidth="561.9564690589905">
+         <Text accessibleRole="TEXT_FIELD" fill="#949494" strokeType="OUTSIDE" strokeWidth="0.0" text="Proyecto Programación Orientada a Objetos" textAlignment="CENTER" wrappingWidth="561.9564690589905">
             <font>
                <Font size="16.0" />
             </font>

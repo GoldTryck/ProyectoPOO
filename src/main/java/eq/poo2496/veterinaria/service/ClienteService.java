@@ -2,6 +2,7 @@ package eq.poo2496.veterinaria.service;
 
 import eq.poo2496.veterinaria.entity.Cliente;
 import eq.poo2496.veterinaria.entity.Mascota;
+import eq.poo2496.veterinaria.entity.Persona;
 import eq.poo2496.veterinaria.repository.ClienteRepository;
 import eq.poo2496.veterinaria.util.Utility;
 import jakarta.transaction.Transactional;
@@ -69,5 +70,9 @@ public class ClienteService {
     }
     public void removeMascota(Cliente clienteSelected) {
         clienteRepository.deleteMascotaById(clienteSelected.getId());
+    }
+
+    public Cliente getById(Long id) {
+        return clienteRepository.findById(id).orElse(null);
     }
 }

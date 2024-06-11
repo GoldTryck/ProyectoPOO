@@ -76,7 +76,7 @@
                   </Label>
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <children>
-                        <Spinner fx:id="hc" prefHeight="29.0" prefWidth="99.0" />
+                        <Spinner fx:id="hora" prefHeight="29.0" prefWidth="99.0" />
                      </children>
                      <padding>
                         <Insets left="10.0" />

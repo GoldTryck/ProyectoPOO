@@ -32,12 +32,12 @@
     -fx-border-color: #000000;
 }
 .inner_pane{
-    -fx-background-color: #8270e8;
+    -fx-background-color: #353A56;
     -fx-border-width: 2px 2px 2px 2px;
     -fx-border-radius: 20px;
     -fx-background-radius: 20px;
     -fx-border-style: solid;
-    -fx-border-color: #4F46A3;
+    -fx-border-color: #000000;
 
 }
 .most_inner_pane{
@@ -78,7 +78,6 @@
 }
 
 .button{
-    -fx-text-fill: #000000;
     -fx-font-weight: bold;
     -fx-font-family: Tahoma;
     -fx-font-size: 15px;
@@ -150,20 +149,18 @@
     -fx-border-style: solid;
     -fx-padding: 10px 0px 10px 20px;
 }
-
-
-
-
 .button.button2{
-    -fx-background-color: #FD9999; /* Color de fondo */
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #748CF1; /* Color de fondo */
     -fx-border-style: solid;
-    -fx-border-color: #FD9999;
+    -fx-border-color: #748CF1;
 }
 .button.button2:hover {
-    -fx-background-color: #bf7474; /* Cambiar el color de fondo al pasar el ratón */
-    -fx-border-color: #bf7474;
+    -fx-background-color: #586cb9; /* Cambiar el color de fondo al pasar el ratón */
+    -fx-border-color: #586cb9;
 }
 .button.button3{
+    -fx-text-fill: #000000;
     -fx-background-color: #ffe0a1; /* Color de fondo */
     -fx-border-style: solid;
     -fx-border-color: #ffe0a1;

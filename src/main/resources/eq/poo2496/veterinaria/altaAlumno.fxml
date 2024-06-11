@@ -125,7 +125,7 @@
                         <Font name="Tahoma" size="15.0" />
                      </font>
                   </Label>
-                  <DatePicker fx:id="fn" prefHeight="29.0" prefWidth="238.0" promptText="00/00/000" GridPane.rowIndex="6" />
+                  <DatePicker fx:id="fecha" prefHeight="29.0" prefWidth="238.0" promptText="00/00/000" GridPane.rowIndex="6" />
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                      <children>
                         <TextField fx:id="cmascota" alignment="CENTER" prefHeight="29.0" prefWidth="200.0" promptText="Telefono 55 2345 6789">

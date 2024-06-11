@@ -3,7 +3,8 @@ package eq.poo2496.veterinaria.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.util.Date;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -15,8 +16,8 @@ public class Cita {
     private long numeroCita;
 
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(nullable = false, unique = true)
-    private Date fechaHora;
+    @Column(nullable = false)
+    private LocalDateTime fechaHora;
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "numeroCliente")
@@ -35,9 +36,28 @@ public class Cita {
 
     @ManyToMany
     @JoinTable(
-            name = "citaServicio",
+            name = "citaServicioIndividual",
             joinColumns = @JoinColumn(name = "idCita"),
-            inverseJoinColumns = @JoinColumn(name = "idServicio")
+            inverseJoinColumns = @JoinColumn(name = "idServicioIndividual")
     )
-    private List<Servicio> servicios;
+    private List<ServicioIndividual> serviciosIndividuales = new ArrayList<>();
+
+    @ManyToMany
+    @JoinTable(
+            name = "citaPaquete",
+            joinColumns = @JoinColumn(name = "idCita"),
+            inverseJoinColumns = @JoinColumn(name = "idPaquete")
+    )
+    private List<Paquete> paquetes = new ArrayList<>();
+
+    @Column(name = "precioTotal")
+    private double precioTotal;
+
+    @Transient
+    public List<Servicio> getAllServicios() {
+        List<Servicio> allServicios = new ArrayList<>();
+        allServicios.addAll(serviciosIndividuales);
+        allServicios.addAll(paquetes);
+        return allServicios;
+    }
 }

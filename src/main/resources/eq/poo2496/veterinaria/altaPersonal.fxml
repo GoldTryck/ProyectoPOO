@@ -81,7 +81,7 @@
                         <Font name="Tahoma" size="15.0" />
                      </font>
                   </TextField>
-                  <DatePicker fx:id="fn" prefHeight="26.0" prefWidth="118.0" promptText="00/00/000" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <DatePicker fx:id="fecha" prefHeight="26.0" prefWidth="118.0" promptText="00/00/000" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                   <Label alignment="CENTER_RIGHT" prefHeight="117.0" prefWidth="321.0" text="Apellido Paterno " GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets />

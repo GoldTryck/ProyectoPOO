@@ -1,6 +1,7 @@
 package eq.poo2496.veterinaria.service;
 
 import eq.poo2496.veterinaria.entity.Asistente;
+import eq.poo2496.veterinaria.entity.Persona;
 import eq.poo2496.veterinaria.repository.AsistenteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -39,5 +40,9 @@ public class AsistenteService {
 
     public List<Asistente> getAll() {
         return asistenteRepository.findAll();
+    }
+
+    public Asistente getById(Long id) {
+        return asistenteRepository.findById(id).orElse(null);
     }
 }

@@ -40,4 +40,7 @@ public class headerController {
 
     public void altaPaquete(){mainController.cargaData("/eq/poo2496/veterinaria/altaPaquete.fxml");}
     public void consultaPaquete(){mainController.cargaData("/eq/poo2496/veterinaria/consultaPaquete.fxml");}
+
+    public void altaCita(){mainController.cargaData("/eq/poo2496/veterinaria/altaCita.fxml");}
+    public void consultaCita(){mainController.cargaData("/eq/poo2496/veterinaria/consultaCita.fxml");}
 }

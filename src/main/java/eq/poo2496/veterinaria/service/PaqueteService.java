@@ -24,4 +24,5 @@ public class PaqueteService {
     public List<Paquete> findAll() {
         return paqueteRepository.findAllWithServicios();
     }
+
 }

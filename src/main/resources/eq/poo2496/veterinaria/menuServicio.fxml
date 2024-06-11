@@ -8,9 +8,9 @@
    <children>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="100.0" styleClass="inner_pane" stylesheets="@style.css">
          <children>
-            <Button mnemonicParsing="false" onAction="#altaServicio" prefHeight="30.0" prefWidth="140.0" styleClass="button3" text="Nuevo Servicio" />
-            <Button  mnemonicParsing="false" onAction="#editarServicio" prefHeight="30.0" prefWidth="140.0" styleClass="button2" text="Editar Servicio" />
-          <Button  mnemonicParsing="false" onAction="#consultaServicio" prefHeight="30.0" prefWidth="130.0" text="Consultar" />
+            <Button mnemonicParsing="false" onAction="#altaServicio" prefHeight="30.0" prefWidth="140.0" styleClass="button2" text="Nuevo Servicio" />
+            <Button mnemonicParsing="false" onAction="#editarServicio" prefHeight="30.0" prefWidth="140.0" styleClass="button2" text="Editar Servicio" />
+          <Button mnemonicParsing="false" onAction="#consultaServicio" prefHeight="30.0" prefWidth="130.0" styleClass="button2" text="Consultar" />
          </children>
       </HBox>
    </children>
